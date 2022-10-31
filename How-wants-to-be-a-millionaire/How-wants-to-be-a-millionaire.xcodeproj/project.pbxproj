@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68A0E23229105ACF0028D216 /* LooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A0E23029105ACF0028D216 /* LooseVC.swift */; };
+		68A0E23329105ACF0028D216 /* LooseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A0E23129105ACF0028D216 /* LooseVC.xib */; };
+		68A0E23729105AFA0028D216 /* WinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A0E23529105AFA0028D216 /* WinVC.swift */; };
+		68A0E23829105AFA0028D216 /* WinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A0E23629105AFA0028D216 /* WinVC.xib */; };
 		86E740132910367000D9F662 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E740112910367000D9F662 /* MainScreen.swift */; };
 		86E740142910367000D9F662 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E740122910367000D9F662 /* MainScreen.xib */; };
 		D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C274290EEBB900EF51B3 /* AppDelegate.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68A0E23029105ACF0028D216 /* LooseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooseVC.swift; sourceTree = "<group>"; };
+		68A0E23129105ACF0028D216 /* LooseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LooseVC.xib; sourceTree = "<group>"; };
+		68A0E23529105AFA0028D216 /* WinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinVC.swift; sourceTree = "<group>"; };
+		68A0E23629105AFA0028D216 /* WinVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinVC.xib; sourceTree = "<group>"; };
 		86E740112910367000D9F662 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		86E740122910367000D9F662 /* MainScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
 		D836C271290EEBB900EF51B3 /* How-wants-to-be-a-millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How-wants-to-be-a-millionaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68A0E23429105AD90028D216 /* LooseVC */ = {
+			isa = PBXGroup;
+			children = (
+				68A0E23029105ACF0028D216 /* LooseVC.swift */,
+				68A0E23129105ACF0028D216 /* LooseVC.xib */,
+			);
+			path = LooseVC;
+			sourceTree = "<group>";
+		};
+		68A0E23929105AFF0028D216 /* WinVC */ = {
+			isa = PBXGroup;
+			children = (
+				68A0E23529105AFA0028D216 /* WinVC.swift */,
+				68A0E23629105AFA0028D216 /* WinVC.xib */,
+			);
+			path = WinVC;
+			sourceTree = "<group>";
+		};
 		86E740152910367A00D9F662 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +100,8 @@
 				D836C288290EEC2100EF51B3 /* Storyboards */,
 				D836C28B290EED4100EF51B3 /* Resources */,
 				86E740152910367A00D9F662 /* MainScreen */,
+				68A0E23429105AD90028D216 /* LooseVC */,
+				68A0E23929105AFF0028D216 /* WinVC */,
 			);
 			path = "How-wants-to-be-a-millionaire";
 			sourceTree = "<group>";
@@ -174,7 +202,9 @@
 				86E740142910367000D9F662 /* MainScreen.xib in Resources */,
 				D836C281290EEBBC00EF51B3 /* LaunchScreen.storyboard in Resources */,
 				D836C27E290EEBBC00EF51B3 /* Assets.xcassets in Resources */,
+				68A0E23829105AFA0028D216 /* WinVC.xib in Resources */,
 				D836C27C290EEBB900EF51B3 /* Main.storyboard in Resources */,
+				68A0E23329105ACF0028D216 /* LooseVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +218,9 @@
 				86E740132910367000D9F662 /* MainScreen.swift in Sources */,
 				D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */,
 				D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */,
+				68A0E23229105ACF0028D216 /* LooseVC.swift in Sources */,
 				D836C277290EEBB900EF51B3 /* SceneDelegate.swift in Sources */,
+				68A0E23729105AFA0028D216 /* WinVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
