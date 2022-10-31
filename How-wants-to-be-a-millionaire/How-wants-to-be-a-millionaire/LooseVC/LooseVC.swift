@@ -1,10 +1,3 @@
-//
-//  LooseVC.swift
-//  How-wants-to-be-a-millionaire
-//
-//  Created by Дмитрий on 31.10.2022.
-//
-
 import UIKit
 
 class LooseVC: UIViewController {
