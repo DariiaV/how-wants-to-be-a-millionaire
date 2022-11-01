@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D833F3A52910FF03005A3B7D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D833F3A42910FF03005A3B7D /* Question.swift */; };
+		D833F3A72910FFE9005A3B7D /* MillionaireBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D833F3A62910FFE9005A3B7D /* MillionaireBrain.swift */; };
+		D833F3A92911102B005A3B7D /* CashPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D833F3A82911102B005A3B7D /* CashPrice.swift */; };
 		D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C274290EEBB900EF51B3 /* AppDelegate.swift */; };
 		D836C277290EEBB900EF51B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C276290EEBB900EF51B3 /* SceneDelegate.swift */; };
 		D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C278290EEBB900EF51B3 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D833F3A42910FF03005A3B7D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D833F3A62910FFE9005A3B7D /* MillionaireBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionaireBrain.swift; sourceTree = "<group>"; };
+		D833F3A82911102B005A3B7D /* CashPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashPrice.swift; sourceTree = "<group>"; };
 		D836C271290EEBB900EF51B3 /* How-wants-to-be-a-millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How-wants-to-be-a-millionaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D836C274290EEBB900EF51B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D836C276290EEBB900EF51B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D833F3A32910FEC1005A3B7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D833F3A42910FF03005A3B7D /* Question.swift */,
+				D833F3A82911102B005A3B7D /* CashPrice.swift */,
+				D833F3A62910FFE9005A3B7D /* MillionaireBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D836C268290EEBB900EF51B3 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +123,7 @@
 		D8710A1829103BE8008E474F /* QuestionsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D833F3A32910FEC1005A3B7D /* Model */,
 				D8710A1929103C0F008E474F /* QuestionsScreenViewController.swift */,
 				D8710A1A29103C0F008E474F /* QuestionsScreenViewController.xib */,
 			);
@@ -185,8 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D833F3A52910FF03005A3B7D /* Question.swift in Sources */,
 				D8710A1B29103C0F008E474F /* QuestionsScreenViewController.swift in Sources */,
 				D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */,
+				D833F3A72910FFE9005A3B7D /* MillionaireBrain.swift in Sources */,
+				D833F3A92911102B005A3B7D /* CashPrice.swift in Sources */,
 				D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */,
 				D836C277290EEBB900EF51B3 /* SceneDelegate.swift in Sources */,
 			);
