@@ -23,24 +23,38 @@ class QuestionListVC: UIViewController {
     @IBOutlet weak var thirteenthQuestion: UIButton!
     @IBOutlet weak var fourteenthQuestion: UIButton!
     @IBOutlet weak var fifteenthQuestion: UIButton!
+
+    @IBOutlet var collectionOfButtons: Array<UIButton>?
+    
+    
+    
+    private var millionaireBrain = MillionaireBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let slice = collectionOfButtons?.dropFirst()
+        for button in slice ?? [] {
+            button.isEnabled = false
+        }
+        
+//        for subview in view.subviews where subview.tag == 1 {
+//                 let button = subview as! UIButton
+//                button.isEnabled = true
+//            }
+        
+        
 
-        // Do any additional setup after loading the view.
+       
     }
 
     @IBAction func questionButton(_ sender: UIButton) {
+        
+        let questionsScreenViewController = QuestionsScreenViewController(nibName: "QuestionsScreenViewController", bundle: nil)
+        show(questionsScreenViewController, sender: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+   
 
 }
