@@ -47,6 +47,7 @@ class QuestionsScreenViewController: UIViewController {
     
     
     @IBAction func getCashButton(_ sender: UIButton) {
+        // открыть экран и получить деньги
     }
     
     @objc private func imageViewDidTapped(_ sender: UITapGestureRecognizer) {
@@ -54,9 +55,9 @@ class QuestionsScreenViewController: UIViewController {
             sender.view?.alpha = 0
             showAlert()
         } else if sender.view?.tag == 2 {
-            let removeValues = millionaireBrain.fiftyFifty()
-            hideButton(tag: removeValues.remove1)
-            hideButton(tag: removeValues.remove2)
+            let removeButtons = millionaireBrain.fiftyFifty()
+            hideButton(tag: removeButtons.remove1)
+            hideButton(tag: removeButtons.remove2)
             sender.view?.alpha = 0
         }
     }
@@ -66,25 +67,22 @@ class QuestionsScreenViewController: UIViewController {
             return
         }
         
-        sender.view?.backgroundColor = UIColor(named: "ButtonChoose")
+        lockScreenFromTap(true)
+        timer?.invalidate()
         
+        sender.view?.backgroundColor = UIColor(named: "ButtonChoose")
         let actualAnswer = millionaireBrain.checkAnswer(tag)
         
-        lockScreenFromTap(true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             if actualAnswer.0 {
-                
                 sender.view?.backgroundColor = UIColor.green
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.millionaireBrain.nextQuestion()
-                self.updateView()
-                }
             } else {
                 self.highlightedCorrectButton(tag: actualAnswer.1)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.millionaireBrain.nextQuestion()
                 self.updateView()
-                }
             }
         }
     }
@@ -121,7 +119,7 @@ class QuestionsScreenViewController: UIViewController {
             print("You lose")
             // present final screen
             // получить несгораемую сумму
-//            print(millionaireBrain.getFireproofCash())
+            //            print(millionaireBrain.getFireproofCash())
             return
         } else if millionaireBrain.playerMistakeCount() <= 1 {
             makeAMistakeImageView.alpha = 0
@@ -129,26 +127,38 @@ class QuestionsScreenViewController: UIViewController {
         
         startCountdown()
         lockScreenFromTap(false)
+        
+        updateHeaderView()
+        updateButtonsText()
+        setButtonsDefaultColor()
+        showButtons()
+    }
+    
+    private func updateHeaderView() {
         questionTextLabel.text = millionaireBrain.getQuestionText()
         questionNumberLabel.text = millionaireBrain.getQuestionNumberText()
         cashLabel.text = millionaireBrain.getCashText()
-        
+    }
+    
+    private func updateButtonsText() {
         buttonALabel.text = millionaireBrain.getAnswerText(0)
         buttonBLabel.text = millionaireBrain.getAnswerText(1)
         buttonCLabel.text = millionaireBrain.getAnswerText(2)
         buttonDLabel.text = millionaireBrain.getAnswerText(3)
-        
-        
+    }
+    
+    private func setButtonsDefaultColor() {
         buttonAView.backgroundColor = UIColor(named: "ButtonDefault")
         buttonBView.backgroundColor = UIColor(named: "ButtonDefault")
         buttonCView.backgroundColor = UIColor(named: "ButtonDefault")
         buttonDView.backgroundColor = UIColor(named: "ButtonDefault")
-        
+    }
+    
+    private func showButtons() {
         buttonAView.alpha = 1
         buttonBView.alpha = 1
         buttonCView.alpha = 1
         buttonDView.alpha = 1
-        
     }
     
     private func lockScreenFromTap(_ isLocked: Bool) {
@@ -161,7 +171,7 @@ class QuestionsScreenViewController: UIViewController {
                 lockView.rightAnchor.constraint(equalTo: view.rightAnchor),
                 lockView.topAnchor.constraint(equalTo: view.topAnchor),
                 lockView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
+                
             ])
         } else {
             lockView.removeFromSuperview()
@@ -200,7 +210,6 @@ class QuestionsScreenViewController: UIViewController {
     }
     
     private func startCountdown() {
-        timer?.invalidate()
         let maxSeconds:Float = 30
         valueSecond = 30
         progressView.progress = valueSecond / maxSeconds

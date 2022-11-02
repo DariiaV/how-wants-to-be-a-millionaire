@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import AVFoundation
+
 struct MillionaireBrain {
    private let quiz = [
     Question(t: "Как называют беспилотный летательный аппарат?",
