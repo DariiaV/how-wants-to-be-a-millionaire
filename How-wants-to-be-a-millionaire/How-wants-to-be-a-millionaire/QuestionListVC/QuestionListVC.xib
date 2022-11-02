@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoRegular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionListVC" customModule="How_wants_to_be_a_millionaire" customModuleProvider="target">
+            <connections>
+                <outlet property="eighthQuestion" destination="7nj-GI-HM2" id="mPy-IX-CNG"/>
+                <outlet property="eleventhQuestion" destination="BSD-bb-y2N" id="Ahd-cf-KDh"/>
+                <outlet property="fifteenthQuestion" destination="NbB-nT-vZg" id="l5R-pT-JKg"/>
+                <outlet property="fifthQuestion" destination="DA3-0g-6qe" id="2qT-Ku-VVO"/>
+                <outlet property="firstQuestion" destination="Zxc-OL-t5M" id="sDt-Cp-cKO"/>
+                <outlet property="fourteenthQuestion" destination="l6l-RX-3jE" id="3hN-fL-Uzm"/>
+                <outlet property="fourthQuestion" destination="WZW-KG-OGZ" id="iNM-3f-FKp"/>
+                <outlet property="ninthQuestion" destination="Ukq-ZD-HBy" id="oRh-bb-xqN"/>
+                <outlet property="secondQuestion" destination="wjr-W6-ngg" id="d4I-vL-sf1"/>
+                <outlet property="seventhQuestion" destination="zJs-Yu-xIY" id="vMm-lx-Q2J"/>
+                <outlet property="sixthQuestion" destination="4hf-14-vWq" id="X7a-be-f7d"/>
+                <outlet property="tenthQuestion" destination="Chk-NB-15u" id="e8m-jy-BkF"/>
+                <outlet property="thirdQuestion" destination="vxy-Cb-MHg" id="hPd-4H-fqA"/>
+                <outlet property="thirteenthQuestion" destination="oWr-Mj-g4o" id="wd7-9x-8D8"/>
+                <outlet property="twelfthQuestion" destination="kMa-Ov-j6O" id="iqD-iK-cQL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ClearBackground" translatesAutoresizingMaskIntoConstraints="NO" id="PJN-v9-6EL">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cOp-3l-NZX">
+                    <rect key="frame" x="47" y="63" width="320" height="770"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="millionare" translatesAutoresizingMaskIntoConstraints="NO" id="0XC-uY-xZw">
+                            <rect key="frame" x="120" y="0.0" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="fhH-Um-qai"/>
+                                <constraint firstAttribute="width" constant="80" id="u68-0e-6jx"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cxl-dc-n67">
+                            <rect key="frame" x="0.0" y="88" width="320" height="682"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWy-po-ZJS">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-nT-vZg">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="PurpleButtonBackground">
+                                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="Tq5-ZY-d00"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qk-zq-8mD">
+                                            <rect key="frame" x="20" y="9" width="82" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Миллион" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6op-tC-Ww3">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="poj-Xb-A7g"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="6op-tC-Ww3" firstAttribute="centerY" secondItem="QWy-po-ZJS" secondAttribute="centerY" id="Ki1-vY-BUI"/>
+                                        <constraint firstItem="7Qk-zq-8mD" firstAttribute="centerY" secondItem="QWy-po-ZJS" secondAttribute="centerY" id="TE1-4i-rF7"/>
+                                        <constraint firstAttribute="height" constant="38" id="XOv-0Z-oCp"/>
+                                        <constraint firstAttribute="trailing" secondItem="6op-tC-Ww3" secondAttribute="trailing" constant="20" id="biE-2J-LCd"/>
+                                        <constraint firstItem="7Qk-zq-8mD" firstAttribute="leading" secondItem="QWy-po-ZJS" secondAttribute="leading" constant="20" id="noj-KP-b5D"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbg-v4-Cr6">
+                                    <rect key="frame" x="0.0" y="46" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6l-RX-3jE">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="wAd-JK-hQX"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-DU-BQZ">
+                                            <rect key="frame" x="20" y="9" width="82" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50000 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfv-ub-yLt">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="4ls-z7-iUU"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="wfv-ub-yLt" secondAttribute="trailing" constant="20" id="Eyd-CE-zCF"/>
+                                        <constraint firstAttribute="height" constant="38" id="RgO-hn-WDv"/>
+                                        <constraint firstItem="QlM-DU-BQZ" firstAttribute="centerY" secondItem="pbg-v4-Cr6" secondAttribute="centerY" id="ewe-Sy-lbW"/>
+                                        <constraint firstItem="wfv-ub-yLt" firstAttribute="centerY" secondItem="pbg-v4-Cr6" secondAttribute="centerY" id="lhs-AN-GAb"/>
+                                        <constraint firstItem="QlM-DU-BQZ" firstAttribute="leading" secondItem="pbg-v4-Cr6" secondAttribute="leading" constant="20" id="uUy-c1-WID"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uM5-Oh-Vqz">
+                                    <rect key="frame" x="0.0" y="92" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWr-Mj-g4o">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="6TF-8J-NjC"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsS-e5-fbg">
+                                            <rect key="frame" x="20" y="9" width="82" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25000 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PV-8y-dr4">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="Xwf-HG-ZVv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="DsS-e5-fbg" firstAttribute="leading" secondItem="uM5-Oh-Vqz" secondAttribute="leading" constant="20" id="0xa-FX-JOo"/>
+                                        <constraint firstAttribute="trailing" secondItem="5PV-8y-dr4" secondAttribute="trailing" constant="20" id="9XG-Wz-deM"/>
+                                        <constraint firstItem="5PV-8y-dr4" firstAttribute="centerY" secondItem="uM5-Oh-Vqz" secondAttribute="centerY" id="I7e-ad-XVD"/>
+                                        <constraint firstItem="DsS-e5-fbg" firstAttribute="centerY" secondItem="uM5-Oh-Vqz" secondAttribute="centerY" id="QZ2-Vv-MfK"/>
+                                        <constraint firstAttribute="height" constant="38" id="gaG-jh-NnG"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJL-d1-lxA">
+                                    <rect key="frame" x="0.0" y="138" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMa-Ov-j6O">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="Ecf-fH-2HL"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-Aj-rBq">
+                                            <rect key="frame" x="20" y="9" width="82" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12500 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zR7-uc-Tq5">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="Gul-C6-2GH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="qzq-Aj-rBq" firstAttribute="centerY" secondItem="gJL-d1-lxA" secondAttribute="centerY" id="03p-ao-hqb"/>
+                                        <constraint firstAttribute="trailing" secondItem="zR7-uc-Tq5" secondAttribute="trailing" constant="20" id="D1c-bh-1np"/>
+                                        <constraint firstAttribute="height" constant="38" id="Gmh-dg-jO1"/>
+                                        <constraint firstItem="qzq-Aj-rBq" firstAttribute="leading" secondItem="gJL-d1-lxA" secondAttribute="leading" constant="20" id="tke-Y3-8K0"/>
+                                        <constraint firstItem="zR7-uc-Tq5" firstAttribute="centerY" secondItem="gJL-d1-lxA" secondAttribute="centerY" id="wmS-XA-G9t"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hy-FU-GQF">
+                                    <rect key="frame" x="0.0" y="184" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSD-bb-y2N">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="9cI-cc-zlg"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rta-zo-S83">
+                                            <rect key="frame" x="20" y="9" width="82" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6400 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVc-To-MrT">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="Xbb-d4-ZCc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Rta-zo-S83" firstAttribute="leading" secondItem="8hy-FU-GQF" secondAttribute="leading" constant="20" id="0YZ-9L-0Fm"/>
+                                        <constraint firstItem="Rta-zo-S83" firstAttribute="centerY" secondItem="8hy-FU-GQF" secondAttribute="centerY" id="9sY-vG-wZC"/>
+                                        <constraint firstAttribute="trailing" secondItem="JVc-To-MrT" secondAttribute="trailing" constant="20" id="E90-8S-Xkm"/>
+                                        <constraint firstAttribute="height" constant="38" id="EIQ-Ma-s5J"/>
+                                        <constraint firstItem="JVc-To-MrT" firstAttribute="centerY" secondItem="8hy-FU-GQF" secondAttribute="centerY" id="IJH-hR-6P2"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYp-O4-djF">
+                                    <rect key="frame" x="0.0" y="230" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chk-NB-15u">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="BlueButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="RP7-8R-Vkn"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHo-h7-m0R">
+                                            <rect key="frame" x="20" y="9" width="82" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3200 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4o-Ro-J6b">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="nGN-9m-M7q"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="fHo-h7-m0R" firstAttribute="leading" secondItem="pYp-O4-djF" secondAttribute="leading" constant="20" id="Bi3-wD-LxG"/>
+                                        <constraint firstItem="q4o-Ro-J6b" firstAttribute="centerY" secondItem="pYp-O4-djF" secondAttribute="centerY" id="GYa-0p-G40"/>
+                                        <constraint firstItem="fHo-h7-m0R" firstAttribute="centerY" secondItem="pYp-O4-djF" secondAttribute="centerY" id="VVw-9J-FrY"/>
+                                        <constraint firstAttribute="trailing" secondItem="q4o-Ro-J6b" secondAttribute="trailing" constant="20" id="ryh-TQ-uH7"/>
+                                        <constraint firstAttribute="height" constant="38" id="urK-f1-JCC"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZ2-aA-fd6">
+                                    <rect key="frame" x="0.0" y="276" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukq-ZD-HBy">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="OvF-gz-s9D"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDm-DQ-8Kb">
+                                            <rect key="frame" x="20" y="9" width="72" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1600 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aM-lU-oCo">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="HR9-7b-S3k"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="38" id="GCL-gX-3ip"/>
+                                        <constraint firstItem="7aM-lU-oCo" firstAttribute="centerY" secondItem="EZ2-aA-fd6" secondAttribute="centerY" id="KAd-Vd-Gfv"/>
+                                        <constraint firstItem="eDm-DQ-8Kb" firstAttribute="leading" secondItem="EZ2-aA-fd6" secondAttribute="leading" constant="20" id="TJU-3n-iEf"/>
+                                        <constraint firstAttribute="trailing" secondItem="7aM-lU-oCo" secondAttribute="trailing" constant="20" id="cEU-oH-cxp"/>
+                                        <constraint firstItem="eDm-DQ-8Kb" firstAttribute="centerY" secondItem="EZ2-aA-fd6" secondAttribute="centerY" id="gpb-44-gKH"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Co5-pw-aTK">
+                                    <rect key="frame" x="0.0" y="322" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nj-GI-HM2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="VeC-XE-Nau"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mae-9y-3B7">
+                                            <rect key="frame" x="20" y="9" width="72" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8000 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRx-6u-H3D">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="uGs-nS-cEM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="mae-9y-3B7" firstAttribute="centerY" secondItem="Co5-pw-aTK" secondAttribute="centerY" id="1pn-Cb-DwT"/>
+                                        <constraint firstItem="lRx-6u-H3D" firstAttribute="centerY" secondItem="Co5-pw-aTK" secondAttribute="centerY" id="H4o-e3-Q1T"/>
+                                        <constraint firstAttribute="height" constant="38" id="Kc2-FB-5zY"/>
+                                        <constraint firstItem="mae-9y-3B7" firstAttribute="leading" secondItem="Co5-pw-aTK" secondAttribute="leading" constant="20" id="YY8-N5-GJc"/>
+                                        <constraint firstAttribute="trailing" secondItem="lRx-6u-H3D" secondAttribute="trailing" constant="20" id="h5y-mX-kJz"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jh-p3-1ma">
+                                    <rect key="frame" x="0.0" y="368" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJs-Yu-xIY">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="DF6-XK-nbb"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a47-8s-scM">
+                                            <rect key="frame" x="20" y="9" width="72" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4000 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9s-8x-3vN">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="viq-0T-Cdf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="K9s-8x-3vN" firstAttribute="centerY" secondItem="0jh-p3-1ma" secondAttribute="centerY" id="L3l-Qb-5W2"/>
+                                        <constraint firstAttribute="trailing" secondItem="K9s-8x-3vN" secondAttribute="trailing" constant="20" id="OrY-Cz-gO3"/>
+                                        <constraint firstItem="a47-8s-scM" firstAttribute="centerY" secondItem="0jh-p3-1ma" secondAttribute="centerY" id="ZyA-0g-G3d"/>
+                                        <constraint firstItem="a47-8s-scM" firstAttribute="leading" secondItem="0jh-p3-1ma" secondAttribute="leading" constant="20" id="gTa-e3-2UY"/>
+                                        <constraint firstAttribute="height" constant="38" id="u7h-tI-9Ba"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqg-eN-IHf">
+                                    <rect key="frame" x="0.0" y="414" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hf-14-vWq">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="A8k-Rz-J5z"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql0-1h-mvv">
+                                            <rect key="frame" x="20" y="9" width="72" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qz9-L9-g3p">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="7yN-qg-r9S"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Ql0-1h-mvv" firstAttribute="leading" secondItem="gqg-eN-IHf" secondAttribute="leading" constant="20" id="6gu-UP-S5a"/>
+                                        <constraint firstAttribute="trailing" secondItem="qz9-L9-g3p" secondAttribute="trailing" constant="20" id="8W3-1V-kPg"/>
+                                        <constraint firstItem="Ql0-1h-mvv" firstAttribute="centerY" secondItem="gqg-eN-IHf" secondAttribute="centerY" id="WXj-j9-kqb"/>
+                                        <constraint firstAttribute="height" constant="38" id="YFT-kr-3JQ"/>
+                                        <constraint firstItem="qz9-L9-g3p" firstAttribute="centerY" secondItem="gqg-eN-IHf" secondAttribute="centerY" id="gdJ-QU-akd"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SN-tv-Ecu">
+                                    <rect key="frame" x="0.0" y="460" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DA3-0g-6qe">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="BlueButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="py3-kU-kJf"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaN-gi-a1u">
+                                            <rect key="frame" x="20" y="9" width="72" height="20"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-uW-L0H">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="80I-Qm-R2A"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="jaN-gi-a1u" firstAttribute="centerY" secondItem="0SN-tv-Ecu" secondAttribute="centerY" id="0j3-aA-wKE"/>
+                                        <constraint firstItem="HbI-uW-L0H" firstAttribute="centerY" secondItem="0SN-tv-Ecu" secondAttribute="centerY" id="70X-SK-KvA"/>
+                                        <constraint firstAttribute="trailing" secondItem="HbI-uW-L0H" secondAttribute="trailing" constant="20" id="IF3-mB-Cpb"/>
+                                        <constraint firstItem="jaN-gi-a1u" firstAttribute="leading" secondItem="0SN-tv-Ecu" secondAttribute="leading" constant="20" id="mAx-O4-tjI"/>
+                                        <constraint firstAttribute="height" constant="38" id="ntf-7Z-QpE"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-ax-VNN">
+                                    <rect key="frame" x="0.0" y="506" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZW-KG-OGZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="hLZ-cb-s4J"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вопрос 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQh-3L-c76">
+                                            <rect key="frame" x="20" y="9" width="72" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zn-DO-qvs">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="1Y5-cZ-Kzq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="8Zn-DO-qvs" secondAttribute="trailing" constant="20" id="QcC-SY-o4L"/>
+                                        <constraint firstAttribute="height" constant="38" id="aDm-mF-lji"/>
+                                        <constraint firstItem="8Zn-DO-qvs" firstAttribute="centerY" secondItem="eDX-ax-VNN" secondAttribute="centerY" id="cp5-wh-Tfi"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pw4-Cn-VHq">
+                                    <rect key="frame" x="0.0" y="552" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-Cb-MHg">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="bii-PE-sr7"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вопрос 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p84-vu-LZl">
+                                            <rect key="frame" x="20" y="9" width="72" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bT-d3-U72">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="LVQ-27-rsd"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="38" id="20H-sn-6km"/>
+                                        <constraint firstAttribute="trailing" secondItem="5bT-d3-U72" secondAttribute="trailing" constant="20" id="Mit-VR-492"/>
+                                        <constraint firstItem="5bT-d3-U72" firstAttribute="centerY" secondItem="pw4-Cn-VHq" secondAttribute="centerY" id="srM-wk-neR"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxn-Hv-6sW">
+                                    <rect key="frame" x="0.0" y="598" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjr-W6-ngg">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="PurpleButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="IVU-7s-5BR"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вопрос 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljs-tw-0AS">
+                                            <rect key="frame" x="20" y="9" width="72" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcu-yl-BwM">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="p6b-0o-m6z"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Zcu-yl-BwM" secondAttribute="trailing" constant="20" id="ATp-wx-Ahx"/>
+                                        <constraint firstItem="Zcu-yl-BwM" firstAttribute="centerY" secondItem="rxn-Hv-6sW" secondAttribute="centerY" id="H3h-r3-j70"/>
+                                        <constraint firstAttribute="height" constant="38" id="iMH-oa-iQO"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hY6-Qc-voj">
+                                    <rect key="frame" x="0.0" y="644" width="320" height="38"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxc-OL-t5M">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="GreenButtonBackground"/>
+                                            <connections>
+                                                <action selector="questionButton:" destination="-1" eventType="touchUpInside" id="o5S-LN-T3t"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вопрос 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgX-mL-SL5">
+                                            <rect key="frame" x="20" y="9" width="72" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 RUB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9V2-og-Iz7">
+                                            <rect key="frame" x="210" y="9" width="90" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="Vhv-hj-X0g"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="9V2-og-Iz7" firstAttribute="centerY" secondItem="hY6-Qc-voj" secondAttribute="centerY" id="TdE-37-VqT"/>
+                                        <constraint firstAttribute="height" constant="38" id="chN-VC-eoS"/>
+                                        <constraint firstAttribute="trailing" secondItem="9V2-og-Iz7" secondAttribute="trailing" constant="20" id="qZ8-5h-tVe"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="682" id="JI4-Sm-iKQ"/>
+                                <constraint firstAttribute="width" constant="320" id="qe9-5f-tjh"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="PJN-v9-6EL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6yU-EX-YQs"/>
+                <constraint firstItem="cOp-3l-NZX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IPD-Rh-xfA"/>
+                <constraint firstItem="cOp-3l-NZX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NcI-w3-YXU"/>
+                <constraint firstAttribute="trailing" secondItem="PJN-v9-6EL" secondAttribute="trailing" id="V9g-Cz-SQs"/>
+                <constraint firstItem="PJN-v9-6EL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fmC-xe-qin"/>
+                <constraint firstAttribute="bottom" secondItem="PJN-v9-6EL" secondAttribute="bottom" id="tVr-C1-cad"/>
+            </constraints>
+            <point key="canvasLocation" x="4.615384615384615" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BlueButtonBackground" width="320" height="38"/>
+        <image name="ClearBackground" width="414" height="736"/>
+        <image name="GreenButtonBackground" width="320" height="38"/>
+        <image name="PurpleButtonBackground" width="320" height="38"/>
+        <image name="millionare" width="87" height="87"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
