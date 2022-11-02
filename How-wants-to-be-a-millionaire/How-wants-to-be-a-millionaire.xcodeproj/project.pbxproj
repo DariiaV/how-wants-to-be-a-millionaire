@@ -11,6 +11,7 @@
 		68A0E23329105ACF0028D216 /* LooseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A0E23129105ACF0028D216 /* LooseVC.xib */; };
 		68A0E23729105AFA0028D216 /* WinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A0E23529105AFA0028D216 /* WinVC.swift */; };
 		68A0E23829105AFA0028D216 /* WinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A0E23629105AFA0028D216 /* WinVC.xib */; };
+		68A0E23B291256120028D216 /* MusicLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A0E23A291256120028D216 /* MusicLogic.swift */; };
 		86E740132910367000D9F662 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E740112910367000D9F662 /* MainScreen.swift */; };
 		86E740142910367000D9F662 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E740122910367000D9F662 /* MainScreen.xib */; };
 		D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C274290EEBB900EF51B3 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 		68A0E23129105ACF0028D216 /* LooseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LooseVC.xib; sourceTree = "<group>"; };
 		68A0E23529105AFA0028D216 /* WinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinVC.swift; sourceTree = "<group>"; };
 		68A0E23629105AFA0028D216 /* WinVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinVC.xib; sourceTree = "<group>"; };
+		68A0E23A291256120028D216 /* MusicLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLogic.swift; sourceTree = "<group>"; };
 		86E740112910367000D9F662 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		86E740122910367000D9F662 /* MainScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
 		D836C271290EEBB900EF51B3 /* How-wants-to-be-a-millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How-wants-to-be-a-millionaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 				86E740152910367A00D9F662 /* MainScreen */,
 				68A0E23429105AD90028D216 /* LooseVC */,
 				68A0E23929105AFF0028D216 /* WinVC */,
+				68A0E23A291256120028D216 /* MusicLogic.swift */,
 			);
 			path = "How-wants-to-be-a-millionaire";
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A0E23B291256120028D216 /* MusicLogic.swift in Sources */,
 				86E740132910367000D9F662 /* MainScreen.swift in Sources */,
 				D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */,
 				D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */,

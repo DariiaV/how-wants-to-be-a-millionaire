@@ -1,18 +1,12 @@
-//
-//  WinVC.swift
-//  How-wants-to-be-a-millionaire
-//
-//  Created by Дмитрий on 31.10.2022.
-//
-
 import UIKit
 
 class WinVC: UIViewController {
 
+    @IBOutlet weak var prizeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
     }
 
 

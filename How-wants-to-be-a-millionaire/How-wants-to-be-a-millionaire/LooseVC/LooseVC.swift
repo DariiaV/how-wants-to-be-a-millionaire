@@ -2,13 +2,16 @@ import UIKit
 
 class LooseVC: UIViewController {
 
+    @IBOutlet weak var attemptLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
     }
 
-
+    @IBAction func playAgainPressed(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
