@@ -31,7 +31,7 @@ class QuestionsScreenViewController: UIViewController {
     
     private lazy var lockView = UIView()
     
-    private var millionaireBrain = MillionaireBrain()
+    var millionaireBrain = MillionaireBrain()
     private var valueSecond:Float = 30
     private var timer: Timer?
     
@@ -132,6 +132,13 @@ class QuestionsScreenViewController: UIViewController {
         updateButtonsText()
         setButtonsDefaultColor()
         showButtons()
+        
+       print(millionaireBrain.questionNumber)
+        
+        let questionListVC = QuestionListVC(nibName: "QuestionListVC", bundle: nil)
+        questionListVC.millionaireBrain.questionNumber = millionaireBrain.questionNumber
+        show(questionListVC, sender: nil)
+        
     }
     
     private func updateHeaderView() {

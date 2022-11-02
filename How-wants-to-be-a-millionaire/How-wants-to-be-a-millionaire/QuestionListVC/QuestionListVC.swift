@@ -8,53 +8,61 @@
 import UIKit
 
 class QuestionListVC: UIViewController {
-    @IBOutlet weak var firstQuestion: UIButton!
-    @IBOutlet weak var secondQuestion: UIButton!
-    @IBOutlet weak var thirdQuestion: UIButton!
-    @IBOutlet weak var fourthQuestion: UIButton!
-    @IBOutlet weak var fifthQuestion: UIButton!
-    @IBOutlet weak var sixthQuestion: UIButton!
-    @IBOutlet weak var seventhQuestion: UIButton!
-    @IBOutlet weak var eighthQuestion: UIButton!
-    @IBOutlet weak var ninthQuestion: UIButton!
-    @IBOutlet weak var tenthQuestion: UIButton!
-    @IBOutlet weak var eleventhQuestion: UIButton!
-    @IBOutlet weak var twelfthQuestion: UIButton!
-    @IBOutlet weak var thirteenthQuestion: UIButton!
-    @IBOutlet weak var fourteenthQuestion: UIButton!
-    @IBOutlet weak var fifteenthQuestion: UIButton!
-
+    
     @IBOutlet var collectionOfButtons: Array<UIButton>?
     
+    @IBOutlet weak var mainLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var secondLeadingConstraint: NSLayoutConstraint!
     
+    var millionaireBrain = MillionaireBrain()
     
-    private var millionaireBrain = MillionaireBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let slice = collectionOfButtons?.dropFirst()
-        for button in slice ?? [] {
+        //    меняю левый констрейнт у стеквью при повороте экрана
+        setLeftConstraintForMainStackView()
+        
+        //        делаю все кнопки неактивными
+        for button in collectionOfButtons ?? [] {
             button.isEnabled = false
         }
         
-//        for subview in view.subviews where subview.tag == 1 {
-//                 let button = subview as! UIButton
-//                button.isEnabled = true
-//            }
+        //        делаю активной актуальную кнопку
+        makeActualQuestionButtonActive(actualQuestionNumber: millionaireBrain.questionNumber + 1)
         
-        
-
-       
     }
-
+    
+    //    меняю левый констрейнт у стеквью при повороте экрана
+    override func viewWillTransition(to: CGSize, with: UIViewControllerTransitionCoordinator){
+        setLeftConstraintForMainStackView()
+    }
+    
+    
+    
     @IBAction func questionButton(_ sender: UIButton) {
         
+//        перехожу на страницу с вопросами
         let questionsScreenViewController = QuestionsScreenViewController(nibName: "QuestionsScreenViewController", bundle: nil)
+        questionsScreenViewController.millionaireBrain.questionNumber = millionaireBrain.questionNumber
         show(questionsScreenViewController, sender: nil)
     }
     
+    //        делаю активной актуальную кнопку
+    func makeActualQuestionButtonActive (actualQuestionNumber: Int) {
+        let activeButton = view.viewWithTag(actualQuestionNumber) as! UIButton
+        activeButton.isEnabled = true
+    }
     
-   
-
+    //    меняю левый констрейнт у стеквью при повороте экрана
+    func setLeftConstraintForMainStackView() {
+        if UIDevice.current.orientation.isLandscape {
+            mainLeadingConstraint.priority = UILayoutPriority(rawValue: 750)
+            secondLeadingConstraint.priority = UILayoutPriority(rawValue: 999)
+        } else if UIDevice.current.orientation.isPortrait {
+            mainLeadingConstraint.priority = UILayoutPriority(rawValue: 1000)
+            secondLeadingConstraint.priority = UILayoutPriority(rawValue: 750)
+        }
+    }
+    
 }

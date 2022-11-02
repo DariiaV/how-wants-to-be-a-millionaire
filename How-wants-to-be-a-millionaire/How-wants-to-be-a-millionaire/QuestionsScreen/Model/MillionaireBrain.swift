@@ -74,7 +74,7 @@ struct MillionaireBrain {
         CashPrice(price: 1000000, fireproof: true)
     ]
 
-    private var questionNumber = 0
+    var questionNumber = 0
     private var mistakeCount = 2
     private var fireproofNumber = 0
     
