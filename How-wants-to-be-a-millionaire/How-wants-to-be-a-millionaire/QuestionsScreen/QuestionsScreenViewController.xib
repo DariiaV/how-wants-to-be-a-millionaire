@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +23,7 @@
                 <outlet property="cashLabel" destination="tmy-Rq-75N" id="aU5-Nj-pRD"/>
                 <outlet property="fiftyFiftyImageView" destination="c3x-RW-WDG" id="tyb-ee-ads"/>
                 <outlet property="makeAMistakeImageView" destination="Xfh-dG-9UY" id="E3f-p4-9pl"/>
+                <outlet property="progressView" destination="evg-kj-lvg" id="VZJ-Az-eCd"/>
                 <outlet property="questionNumberLabel" destination="WHQ-DJ-ga7" id="27u-ji-MC9"/>
                 <outlet property="questionTextLabel" destination="Fll-zr-TAo" id="QKK-7h-iVB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -191,26 +193,49 @@
                             <rect key="frame" x="0.0" y="594" width="390" height="224"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="IA6-x4-oGF">
-                                    <rect key="frame" x="12" y="0.0" width="366" height="224"/>
+                                    <rect key="frame" x="12" y="0.0" width="366" height="123"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-dG-9UY">
-                                            <rect key="frame" x="0.0" y="0.0" width="114" height="224"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="114" height="123"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="NP1-VZ-YiP">
-                                            <rect key="frame" x="126" y="0.0" width="114" height="224"/>
+                                            <rect key="frame" x="126" y="0.0" width="114" height="123"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiftyFifty" translatesAutoresizingMaskIntoConstraints="NO" id="c3x-RW-WDG">
-                                            <rect key="frame" x="252" y="0.0" width="114" height="224"/>
+                                            <rect key="frame" x="252" y="0.0" width="114" height="123"/>
                                         </imageView>
                                     </subviews>
                                 </stackView>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="evg-kj-lvg">
+                                    <rect key="frame" x="0.0" y="135" width="390" height="10"/>
+                                    <color key="tintColor" red="0.88235294119999996" green="0.62745098040000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="aUS-qF-oXD"/>
+                                    </constraints>
+                                </progressView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnt-7r-4AU">
+                                    <rect key="frame" x="0.0" y="157" width="390" height="67"/>
+                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                    <color key="tintColor" name="ButtonChoose"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Забрать деньги"/>
+                                    <connections>
+                                        <action selector="getCashButton:" destination="-1" eventType="touchUpInside" id="Dni-24-UmH"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="IA6-x4-oGF" firstAttribute="top" secondItem="ssQ-Yd-SA4" secondAttribute="top" id="7iI-eA-xhI"/>
+                                <constraint firstItem="evg-kj-lvg" firstAttribute="leading" secondItem="ssQ-Yd-SA4" secondAttribute="leading" id="DYl-uR-bVW"/>
+                                <constraint firstAttribute="trailing" secondItem="evg-kj-lvg" secondAttribute="trailing" id="E0p-oz-sKd"/>
                                 <constraint firstItem="IA6-x4-oGF" firstAttribute="leading" secondItem="ssQ-Yd-SA4" secondAttribute="leading" constant="12" id="EZJ-6M-5Vh"/>
-                                <constraint firstAttribute="bottom" secondItem="IA6-x4-oGF" secondAttribute="bottom" id="M8u-mi-g0e"/>
+                                <constraint firstItem="Mnt-7r-4AU" firstAttribute="leading" secondItem="ssQ-Yd-SA4" secondAttribute="leading" id="JyL-Vl-mr0"/>
+                                <constraint firstAttribute="bottom" secondItem="Mnt-7r-4AU" secondAttribute="bottom" id="Rrz-kq-J5N"/>
                                 <constraint firstAttribute="trailing" secondItem="IA6-x4-oGF" secondAttribute="trailing" constant="12" id="Rza-aQ-0kd"/>
+                                <constraint firstItem="Mnt-7r-4AU" firstAttribute="top" secondItem="evg-kj-lvg" secondAttribute="bottom" constant="12" id="cSz-hP-hJw"/>
+                                <constraint firstAttribute="trailing" secondItem="Mnt-7r-4AU" secondAttribute="trailing" id="lQG-eh-xhm"/>
+                                <constraint firstItem="evg-kj-lvg" firstAttribute="top" secondItem="IA6-x4-oGF" secondAttribute="bottom" constant="12" id="tpi-BG-fzG"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -235,5 +260,8 @@
         <image name="head" width="108" height="84"/>
         <image name="millionare" width="87" height="87"/>
         <image name="people" width="414" height="225"/>
+        <namedColor name="ButtonChoose">
+            <color red="0.88200002908706665" green="0.62699997425079346" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

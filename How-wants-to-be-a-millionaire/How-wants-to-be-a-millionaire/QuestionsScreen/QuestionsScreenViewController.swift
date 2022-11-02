@@ -27,9 +27,13 @@ class QuestionsScreenViewController: UIViewController {
     @IBOutlet weak var askTheAudienceImageView: UIImageView!
     @IBOutlet weak var fiftyFiftyImageView: UIImageView!
     
+    @IBOutlet weak var progressView: UIProgressView!
+    
     private lazy var lockView = UIView()
     
     private var millionaireBrain = MillionaireBrain()
+    private var valueSecond:Float = 30
+    private var timer: Timer?
     
     
     override func viewDidLoad() {
@@ -39,6 +43,10 @@ class QuestionsScreenViewController: UIViewController {
         setupButtons()
         setupImages()
         updateView()
+    }
+    
+    
+    @IBAction func getCashButton(_ sender: UIButton) {
     }
     
     @objc private func imageViewDidTapped(_ sender: UITapGestureRecognizer) {
@@ -63,11 +71,11 @@ class QuestionsScreenViewController: UIViewController {
         let actualAnswer = millionaireBrain.checkAnswer(tag)
         
         lockScreenFromTap(true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             if actualAnswer.0 {
                 
                 sender.view?.backgroundColor = UIColor.green
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 self.millionaireBrain.nextQuestion()
                 self.updateView()
                 }
@@ -109,13 +117,17 @@ class QuestionsScreenViewController: UIViewController {
     
     private func updateView() {
         if millionaireBrain.playerMistakeCount() <= 0 {
+            timer?.invalidate()
             print("You lose")
             // present final screen
+            // получить несгораемую сумму
+//            print(millionaireBrain.getFireproofCash())
             return
         } else if millionaireBrain.playerMistakeCount() <= 1 {
             makeAMistakeImageView.alpha = 0
         }
         
+        startCountdown()
         lockScreenFromTap(false)
         questionTextLabel.text = millionaireBrain.getQuestionText()
         questionNumberLabel.text = millionaireBrain.getQuestionNumberText()
@@ -187,6 +199,20 @@ class QuestionsScreenViewController: UIViewController {
         present(alert, animated: true)
     }
     
+    private func startCountdown() {
+        timer?.invalidate()
+        let maxSeconds:Float = 30
+        valueSecond = 30
+        progressView.progress = valueSecond / maxSeconds
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+            if self.valueSecond == 0 {
+                self.timer?.invalidate()
+                // проигрыш
+            }
+            self.valueSecond -= 1
+            self.progressView.progress = self.valueSecond / maxSeconds
+        })
+    }
     
 }
 
