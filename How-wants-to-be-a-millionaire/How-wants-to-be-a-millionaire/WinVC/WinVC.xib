@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WinVC" customModule="How_wants_to_be_a_millionaire" customModuleProvider="target">
             <connections>
+                <outlet property="prizeLabel" destination="TFx-Gf-akn" id="q3L-3e-1VF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

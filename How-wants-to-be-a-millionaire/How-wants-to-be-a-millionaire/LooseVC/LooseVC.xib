@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LooseVC" customModule="How_wants_to_be_a_millionaire" customModuleProvider="target">
             <connections>
+                <outlet property="attemptLabel" destination="IG1-aj-jtW" id="DW6-A0-i67"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -53,12 +54,15 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uul-dl-Pud">
-                    <rect key="frame" x="78" y="726" width="258" height="66"/>
+                    <rect key="frame" x="60.5" y="726" width="293.5" height="51.5"/>
                     <color key="tintColor" systemColor="systemBackgroundColor"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="PLAY AGAIN">
-                        <fontDescription key="titleFontDescription" type="system" pointSize="43"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Попробовать ещё">
+                        <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="playAgainPressed:" destination="-1" eventType="touchUpInside" id="bcB-Pf-8uj"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
