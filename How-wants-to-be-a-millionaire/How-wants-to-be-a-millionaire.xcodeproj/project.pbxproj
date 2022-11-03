@@ -26,6 +26,11 @@
 		D8E525402913A09D00551FD9 /* RobotoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8E5253C2913A09D00551FD9 /* RobotoBold.ttf */; };
 		D8E5254B2913A0F100551FD9 /* RulesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525492913A0F100551FD9 /* RulesPage.xib */; };
 		D8E5254C2913A0F100551FD9 /* RulesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5254A2913A0F100551FD9 /* RulesPage.swift */; };
+		D8E5255A2913A21000551FD9 /* MusicLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E525592913A21000551FD9 /* MusicLogic.swift */; };
+		D8E5255E2913A21900551FD9 /* WinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E5255C2913A21900551FD9 /* WinVC.xib */; };
+		D8E5255F2913A21900551FD9 /* WinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5255D2913A21900551FD9 /* WinVC.swift */; };
+		D8E525632913A24D00551FD9 /* LooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E525612913A24D00551FD9 /* LooseVC.swift */; };
+		D8E525642913A24D00551FD9 /* LooseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525622913A24D00551FD9 /* LooseVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +56,11 @@
 		D8E5253C2913A09D00551FD9 /* RobotoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoBold.ttf; sourceTree = "<group>"; };
 		D8E525492913A0F100551FD9 /* RulesPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RulesPage.xib; sourceTree = "<group>"; };
 		D8E5254A2913A0F100551FD9 /* RulesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesPage.swift; sourceTree = "<group>"; };
+		D8E525592913A21000551FD9 /* MusicLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLogic.swift; sourceTree = "<group>"; };
+		D8E5255C2913A21900551FD9 /* WinVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinVC.xib; sourceTree = "<group>"; };
+		D8E5255D2913A21900551FD9 /* WinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinVC.swift; sourceTree = "<group>"; };
+		D8E525612913A24D00551FD9 /* LooseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LooseVC.swift; sourceTree = "<group>"; };
+		D8E525622913A24D00551FD9 /* LooseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LooseVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,9 @@
 		D836C273290EEBB900EF51B3 /* How-wants-to-be-a-millionaire */ = {
 			isa = PBXGroup;
 			children = (
+				D8E525602913A24D00551FD9 /* LooseVC */,
+				D8E5255B2913A21900551FD9 /* WinVC */,
+				D8E525592913A21000551FD9 /* MusicLogic.swift */,
 				D8E525482913A0F100551FD9 /* RulesPage */,
 				D8E525382913A09D00551FD9 /* MainScreen */,
 				581DB515291281E200B2DEB7 /* QuestionListVC */,
@@ -180,6 +193,24 @@
 			path = RulesPage;
 			sourceTree = "<group>";
 		};
+		D8E5255B2913A21900551FD9 /* WinVC */ = {
+			isa = PBXGroup;
+			children = (
+				D8E5255C2913A21900551FD9 /* WinVC.xib */,
+				D8E5255D2913A21900551FD9 /* WinVC.swift */,
+			);
+			path = WinVC;
+			sourceTree = "<group>";
+		};
+		D8E525602913A24D00551FD9 /* LooseVC */ = {
+			isa = PBXGroup;
+			children = (
+				D8E525612913A24D00551FD9 /* LooseVC.swift */,
+				D8E525622913A24D00551FD9 /* LooseVC.xib */,
+			);
+			path = LooseVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8710A1C29103C0F008E474F /* QuestionsScreenViewController.xib in Resources */,
+				D8E525642913A24D00551FD9 /* LooseVC.xib in Resources */,
+				D8E5255E2913A21900551FD9 /* WinVC.xib in Resources */,
 				D836C281290EEBBC00EF51B3 /* LaunchScreen.storyboard in Resources */,
 				D8E5253D2913A09D00551FD9 /* MainScreen.xib in Resources */,
 				D8E5253E2913A09D00551FD9 /* RobotoRegular.ttf in Resources */,
@@ -259,8 +292,11 @@
 			files = (
 				D833F3A52910FF03005A3B7D /* Question.swift in Sources */,
 				D8710A1B29103C0F008E474F /* QuestionsScreenViewController.swift in Sources */,
+				D8E5255A2913A21000551FD9 /* MusicLogic.swift in Sources */,
 				D8E5253F2913A09D00551FD9 /* MainScreen.swift in Sources */,
 				D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */,
+				D8E525632913A24D00551FD9 /* LooseVC.swift in Sources */,
+				D8E5255F2913A21900551FD9 /* WinVC.swift in Sources */,
 				D833F3A72910FFE9005A3B7D /* MillionaireBrain.swift in Sources */,
 				581DB518291281F300B2DEB7 /* QuestionListVC.swift in Sources */,
 				D8E5254C2913A0F100551FD9 /* RulesPage.swift in Sources */,
