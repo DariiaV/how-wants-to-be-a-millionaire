@@ -18,14 +18,14 @@
 		D836C27C290EEBB900EF51B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D836C27A290EEBB900EF51B3 /* Main.storyboard */; };
 		D836C27E290EEBBC00EF51B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D836C27D290EEBBC00EF51B3 /* Assets.xcassets */; };
 		D836C281290EEBBC00EF51B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D836C27F290EEBBC00EF51B3 /* LaunchScreen.storyboard */; };
-		D8514C3C29139D6200B82624 /* RulesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8514C3A29139D6200B82624 /* RulesPage.xib */; };
-		D8514C3D29139D6200B82624 /* RulesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8514C3B29139D6200B82624 /* RulesPage.swift */; };
-		D8514C4329139D8800B82624 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8514C3F29139D8800B82624 /* MainScreen.xib */; };
-		D8514C4429139D8800B82624 /* RobotoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8514C4029139D8800B82624 /* RobotoRegular.ttf */; };
-		D8514C4529139D8800B82624 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8514C4129139D8800B82624 /* MainScreen.swift */; };
-		D8514C4629139D8800B82624 /* RobotoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8514C4229139D8800B82624 /* RobotoBold.ttf */; };
 		D8710A1B29103C0F008E474F /* QuestionsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8710A1929103C0F008E474F /* QuestionsScreenViewController.swift */; };
 		D8710A1C29103C0F008E474F /* QuestionsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8710A1A29103C0F008E474F /* QuestionsScreenViewController.xib */; };
+		D8E5253D2913A09D00551FD9 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525392913A09D00551FD9 /* MainScreen.xib */; };
+		D8E5253E2913A09D00551FD9 /* RobotoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8E5253A2913A09D00551FD9 /* RobotoRegular.ttf */; };
+		D8E5253F2913A09D00551FD9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5253B2913A09D00551FD9 /* MainScreen.swift */; };
+		D8E525402913A09D00551FD9 /* RobotoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8E5253C2913A09D00551FD9 /* RobotoBold.ttf */; };
+		D8E5254B2913A0F100551FD9 /* RulesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525492913A0F100551FD9 /* RulesPage.xib */; };
+		D8E5254C2913A0F100551FD9 /* RulesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5254A2913A0F100551FD9 /* RulesPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,14 +43,14 @@
 		D836C27D290EEBBC00EF51B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D836C280290EEBBC00EF51B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D836C282290EEBBC00EF51B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8514C3A29139D6200B82624 /* RulesPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RulesPage.xib; sourceTree = "<group>"; };
-		D8514C3B29139D6200B82624 /* RulesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesPage.swift; sourceTree = "<group>"; };
-		D8514C3F29139D8800B82624 /* MainScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
-		D8514C4029139D8800B82624 /* RobotoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoRegular.ttf; sourceTree = "<group>"; };
-		D8514C4129139D8800B82624 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
-		D8514C4229139D8800B82624 /* RobotoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoBold.ttf; sourceTree = "<group>"; };
 		D8710A1929103C0F008E474F /* QuestionsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsScreenViewController.swift; sourceTree = "<group>"; };
 		D8710A1A29103C0F008E474F /* QuestionsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsScreenViewController.xib; sourceTree = "<group>"; };
+		D8E525392913A09D00551FD9 /* MainScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
+		D8E5253A2913A09D00551FD9 /* RobotoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoRegular.ttf; sourceTree = "<group>"; };
+		D8E5253B2913A09D00551FD9 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		D8E5253C2913A09D00551FD9 /* RobotoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoBold.ttf; sourceTree = "<group>"; };
+		D8E525492913A0F100551FD9 /* RulesPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RulesPage.xib; sourceTree = "<group>"; };
+		D8E5254A2913A0F100551FD9 /* RulesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +102,8 @@
 		D836C273290EEBB900EF51B3 /* How-wants-to-be-a-millionaire */ = {
 			isa = PBXGroup;
 			children = (
-				D8514C3E29139D8800B82624 /* MainScreen */,
-				D8514C3929139D6200B82624 /* RulesPage */,
-				D8514C3829139D5000B82624 /* WinVC */,
+				D8E525482913A0F100551FD9 /* RulesPage */,
+				D8E525382913A09D00551FD9 /* MainScreen */,
 				581DB515291281E200B2DEB7 /* QuestionListVC */,
 				D8710A1829103BE8008E474F /* QuestionsScreen */,
 				D836C28A290EEC4D00EF51B3 /* ApplicationLayer */,
@@ -151,36 +150,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D8514C3829139D5000B82624 /* WinVC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = WinVC;
-			path = ../WinVC;
-			sourceTree = "<group>";
-		};
-		D8514C3929139D6200B82624 /* RulesPage */ = {
-			isa = PBXGroup;
-			children = (
-				D8514C3A29139D6200B82624 /* RulesPage.xib */,
-				D8514C3B29139D6200B82624 /* RulesPage.swift */,
-			);
-			name = RulesPage;
-			path = "../../../../How-wants-to-be-a-millionaire/RulesPage";
-			sourceTree = "<group>";
-		};
-		D8514C3E29139D8800B82624 /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				D8514C3F29139D8800B82624 /* MainScreen.xib */,
-				D8514C4029139D8800B82624 /* RobotoRegular.ttf */,
-				D8514C4129139D8800B82624 /* MainScreen.swift */,
-				D8514C4229139D8800B82624 /* RobotoBold.ttf */,
-			);
-			name = MainScreen;
-			path = "../../../../How-wants-to-be-a-millionaire/MainScreen";
-			sourceTree = "<group>";
-		};
 		D8710A1829103BE8008E474F /* QuestionsScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +158,26 @@
 				D8710A1A29103C0F008E474F /* QuestionsScreenViewController.xib */,
 			);
 			path = QuestionsScreen;
+			sourceTree = "<group>";
+		};
+		D8E525382913A09D00551FD9 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D8E525392913A09D00551FD9 /* MainScreen.xib */,
+				D8E5253A2913A09D00551FD9 /* RobotoRegular.ttf */,
+				D8E5253B2913A09D00551FD9 /* MainScreen.swift */,
+				D8E5253C2913A09D00551FD9 /* RobotoBold.ttf */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		D8E525482913A0F100551FD9 /* RulesPage */ = {
+			isa = PBXGroup;
+			children = (
+				D8E525492913A0F100551FD9 /* RulesPage.xib */,
+				D8E5254A2913A0F100551FD9 /* RulesPage.swift */,
+			);
+			path = RulesPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,15 +238,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8514C3C29139D6200B82624 /* RulesPage.xib in Resources */,
 				D8710A1C29103C0F008E474F /* QuestionsScreenViewController.xib in Resources */,
 				D836C281290EEBBC00EF51B3 /* LaunchScreen.storyboard in Resources */,
-				D8514C4329139D8800B82624 /* MainScreen.xib in Resources */,
-				D8514C4429139D8800B82624 /* RobotoRegular.ttf in Resources */,
+				D8E5253D2913A09D00551FD9 /* MainScreen.xib in Resources */,
+				D8E5253E2913A09D00551FD9 /* RobotoRegular.ttf in Resources */,
 				581DB519291281F300B2DEB7 /* QuestionListVC.xib in Resources */,
 				D836C27E290EEBBC00EF51B3 /* Assets.xcassets in Resources */,
-				D8514C4629139D8800B82624 /* RobotoBold.ttf in Resources */,
+				D8E525402913A09D00551FD9 /* RobotoBold.ttf in Resources */,
 				D836C27C290EEBB900EF51B3 /* Main.storyboard in Resources */,
+				D8E5254B2913A0F100551FD9 /* RulesPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +259,11 @@
 			files = (
 				D833F3A52910FF03005A3B7D /* Question.swift in Sources */,
 				D8710A1B29103C0F008E474F /* QuestionsScreenViewController.swift in Sources */,
-				D8514C4529139D8800B82624 /* MainScreen.swift in Sources */,
+				D8E5253F2913A09D00551FD9 /* MainScreen.swift in Sources */,
 				D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */,
 				D833F3A72910FFE9005A3B7D /* MillionaireBrain.swift in Sources */,
 				581DB518291281F300B2DEB7 /* QuestionListVC.swift in Sources */,
-				D8514C3D29139D6200B82624 /* RulesPage.swift in Sources */,
+				D8E5254C2913A0F100551FD9 /* RulesPage.swift in Sources */,
 				D833F3A92911102B005A3B7D /* CashPrice.swift in Sources */,
 				D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */,
 				D836C277290EEBB900EF51B3 /* SceneDelegate.swift in Sources */,
