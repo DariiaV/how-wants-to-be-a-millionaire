@@ -74,8 +74,13 @@ struct MillionaireBrain {
         CashPrice(price: 1000000, fireproof: true)
     ]
 
-    private var questionNumber = 0
+    var questionNumber = 0
+    var isRightToMakeMistateIsActive = true
+    var isHallHelpIsActive = true
+    var isFiftyFiftyIsActive = true
     private var mistakeCount = 2
+    private var fireproofNumber = 0
+    
     
     func getQuestionText() -> String {
         quiz[questionNumber].text
@@ -94,8 +99,10 @@ struct MillionaireBrain {
     }
     
     mutating func nextQuestion() {
-        
         if questionNumber < quiz.count - 1 {
+            fireproofNumber = cashPrices[questionNumber].fireproof
+            ? questionNumber
+            : fireproofNumber
             questionNumber += 1
         } else {
             questionNumber = 0
@@ -140,7 +147,15 @@ struct MillionaireBrain {
         default: return "D"
             
         }
-        
     }
-
+    
+    func getFireproofCash() -> String {
+        if fireproofNumber == 0 {
+            return "0 RUB"
+        } else {
+            return "\(cashPrices[fireproofNumber].price) RUB"
+        }
+    }
+    
+    
 }
