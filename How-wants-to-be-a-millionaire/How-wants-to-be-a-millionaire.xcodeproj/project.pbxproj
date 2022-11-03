@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		86E740132910367000D9F662 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E740112910367000D9F662 /* MainScreen.swift */; };
 		86E740142910367000D9F662 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E740122910367000D9F662 /* MainScreen.xib */; };
+		86E7401C29116FF800D9F662 /* RobotoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86E7401B29115F3B00D9F662 /* RobotoBold.ttf */; };
+		86E7401D29116FFA00D9F662 /* RobotoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86E7401A29115F3B00D9F662 /* RobotoRegular.ttf */; };
+		86E7402A29119B3300D9F662 /* RulesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E7402829119B3300D9F662 /* RulesPage.swift */; };
+		86E7402B29119B3300D9F662 /* RulesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E7402929119B3300D9F662 /* RulesPage.xib */; };
 		D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C274290EEBB900EF51B3 /* AppDelegate.swift */; };
 		D836C277290EEBB900EF51B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C276290EEBB900EF51B3 /* SceneDelegate.swift */; };
 		D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C278290EEBB900EF51B3 /* ViewController.swift */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		86E740112910367000D9F662 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		86E740122910367000D9F662 /* MainScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
+		86E7401A29115F3B00D9F662 /* RobotoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoRegular.ttf; sourceTree = "<group>"; };
+		86E7401B29115F3B00D9F662 /* RobotoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoBold.ttf; sourceTree = "<group>"; };
+		86E7402829119B3300D9F662 /* RulesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesPage.swift; sourceTree = "<group>"; };
+		86E7402929119B3300D9F662 /* RulesPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesPage.xib; sourceTree = "<group>"; };
 		D836C271290EEBB900EF51B3 /* How-wants-to-be-a-millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How-wants-to-be-a-millionaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D836C274290EEBB900EF51B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D836C276290EEBB900EF51B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,8 +54,19 @@
 			children = (
 				86E740112910367000D9F662 /* MainScreen.swift */,
 				86E740122910367000D9F662 /* MainScreen.xib */,
+				86E7401B29115F3B00D9F662 /* RobotoBold.ttf */,
+				86E7401A29115F3B00D9F662 /* RobotoRegular.ttf */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		86E7402C29119B3900D9F662 /* RulesPage */ = {
+			isa = PBXGroup;
+			children = (
+				86E7402829119B3300D9F662 /* RulesPage.swift */,
+				86E7402929119B3300D9F662 /* RulesPage.xib */,
+			);
+			path = RulesPage;
 			sourceTree = "<group>";
 		};
 		D836C268290EEBB900EF51B3 = {
@@ -74,6 +93,7 @@
 				D836C288290EEC2100EF51B3 /* Storyboards */,
 				D836C28B290EED4100EF51B3 /* Resources */,
 				86E740152910367A00D9F662 /* MainScreen */,
+				86E7402C29119B3900D9F662 /* RulesPage */,
 			);
 			path = "How-wants-to-be-a-millionaire";
 			sourceTree = "<group>";
@@ -171,8 +191,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E7402B29119B3300D9F662 /* RulesPage.xib in Resources */,
+				86E7401D29116FFA00D9F662 /* RobotoRegular.ttf in Resources */,
 				86E740142910367000D9F662 /* MainScreen.xib in Resources */,
 				D836C281290EEBBC00EF51B3 /* LaunchScreen.storyboard in Resources */,
+				86E7401C29116FF800D9F662 /* RobotoBold.ttf in Resources */,
 				D836C27E290EEBBC00EF51B3 /* Assets.xcassets in Resources */,
 				D836C27C290EEBB900EF51B3 /* Main.storyboard in Resources */,
 			);
@@ -186,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86E740132910367000D9F662 /* MainScreen.swift in Sources */,
+				86E7402A29119B3300D9F662 /* RulesPage.swift in Sources */,
 				D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */,
 				D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */,
 				D836C277290EEBB900EF51B3 /* SceneDelegate.swift in Sources */,
