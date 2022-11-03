@@ -21,16 +21,20 @@
 		D8710A1B29103C0F008E474F /* QuestionsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8710A1929103C0F008E474F /* QuestionsScreenViewController.swift */; };
 		D8710A1C29103C0F008E474F /* QuestionsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8710A1A29103C0F008E474F /* QuestionsScreenViewController.xib */; };
 		D8E5253D2913A09D00551FD9 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525392913A09D00551FD9 /* MainScreen.xib */; };
-		D8E5253E2913A09D00551FD9 /* RobotoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8E5253A2913A09D00551FD9 /* RobotoRegular.ttf */; };
 		D8E5253F2913A09D00551FD9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5253B2913A09D00551FD9 /* MainScreen.swift */; };
 		D8E525402913A09D00551FD9 /* RobotoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8E5253C2913A09D00551FD9 /* RobotoBold.ttf */; };
 		D8E5254B2913A0F100551FD9 /* RulesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525492913A0F100551FD9 /* RulesPage.xib */; };
 		D8E5254C2913A0F100551FD9 /* RulesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5254A2913A0F100551FD9 /* RulesPage.swift */; };
-		D8E5255A2913A21000551FD9 /* MusicLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E525592913A21000551FD9 /* MusicLogic.swift */; };
+		D8E5255A2913A21000551FD9 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E525592913A21000551FD9 /* AudioManager.swift */; };
 		D8E5255E2913A21900551FD9 /* WinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E5255C2913A21900551FD9 /* WinVC.xib */; };
 		D8E5255F2913A21900551FD9 /* WinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5255D2913A21900551FD9 /* WinVC.swift */; };
 		D8E525632913A24D00551FD9 /* LooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E525612913A24D00551FD9 /* LooseVC.swift */; };
 		D8E525642913A24D00551FD9 /* LooseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525622913A24D00551FD9 /* LooseVC.xib */; };
+		D8E5256C2913A37700551FD9 /* wrongAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8E525672913A37700551FD9 /* wrongAnswer.mp3 */; };
+		D8E5256D2913A37700551FD9 /* correctAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8E525682913A37700551FD9 /* correctAnswer.mp3 */; };
+		D8E5256E2913A37700551FD9 /* playerWon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8E525692913A37700551FD9 /* playerWon.mp3 */; };
+		D8E5256F2913A37700551FD9 /* wait.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8E5256A2913A37700551FD9 /* wait.mp3 */; };
+		D8E525702913A37700551FD9 /* SecondsCount.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8E5256B2913A37700551FD9 /* SecondsCount.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,16 +55,20 @@
 		D8710A1929103C0F008E474F /* QuestionsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsScreenViewController.swift; sourceTree = "<group>"; };
 		D8710A1A29103C0F008E474F /* QuestionsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsScreenViewController.xib; sourceTree = "<group>"; };
 		D8E525392913A09D00551FD9 /* MainScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
-		D8E5253A2913A09D00551FD9 /* RobotoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoRegular.ttf; sourceTree = "<group>"; };
 		D8E5253B2913A09D00551FD9 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		D8E5253C2913A09D00551FD9 /* RobotoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoBold.ttf; sourceTree = "<group>"; };
 		D8E525492913A0F100551FD9 /* RulesPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RulesPage.xib; sourceTree = "<group>"; };
 		D8E5254A2913A0F100551FD9 /* RulesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesPage.swift; sourceTree = "<group>"; };
-		D8E525592913A21000551FD9 /* MusicLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLogic.swift; sourceTree = "<group>"; };
+		D8E525592913A21000551FD9 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		D8E5255C2913A21900551FD9 /* WinVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinVC.xib; sourceTree = "<group>"; };
 		D8E5255D2913A21900551FD9 /* WinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinVC.swift; sourceTree = "<group>"; };
 		D8E525612913A24D00551FD9 /* LooseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LooseVC.swift; sourceTree = "<group>"; };
 		D8E525622913A24D00551FD9 /* LooseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LooseVC.xib; sourceTree = "<group>"; };
+		D8E525672913A37700551FD9 /* wrongAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrongAnswer.mp3; sourceTree = "<group>"; };
+		D8E525682913A37700551FD9 /* correctAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correctAnswer.mp3; sourceTree = "<group>"; };
+		D8E525692913A37700551FD9 /* playerWon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playerWon.mp3; sourceTree = "<group>"; };
+		D8E5256A2913A37700551FD9 /* wait.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wait.mp3; sourceTree = "<group>"; };
+		D8E5256B2913A37700551FD9 /* SecondsCount.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SecondsCount.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,17 +120,18 @@
 		D836C273290EEBB900EF51B3 /* How-wants-to-be-a-millionaire */ = {
 			isa = PBXGroup;
 			children = (
+				D8E525662913A36000551FD9 /* Sounds */,
+				D8E525652913A31900551FD9 /* Helpers */,
+				D836C28A290EEC4D00EF51B3 /* ApplicationLayer */,
 				D8E525602913A24D00551FD9 /* LooseVC */,
-				D8E5255B2913A21900551FD9 /* WinVC */,
-				D8E525592913A21000551FD9 /* MusicLogic.swift */,
-				D8E525482913A0F100551FD9 /* RulesPage */,
 				D8E525382913A09D00551FD9 /* MainScreen */,
 				581DB515291281E200B2DEB7 /* QuestionListVC */,
 				D8710A1829103BE8008E474F /* QuestionsScreen */,
-				D836C28A290EEC4D00EF51B3 /* ApplicationLayer */,
-				D836C289290EEC2E00EF51B3 /* ViewControllers */,
-				D836C288290EEC2100EF51B3 /* Storyboards */,
 				D836C28B290EED4100EF51B3 /* Resources */,
+				D8E525482913A0F100551FD9 /* RulesPage */,
+				D836C288290EEC2100EF51B3 /* Storyboards */,
+				D836C289290EEC2E00EF51B3 /* ViewControllers */,
+				D8E5255B2913A21900551FD9 /* WinVC */,
 			);
 			path = "How-wants-to-be-a-millionaire";
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 		D836C28B290EED4100EF51B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D8E5253C2913A09D00551FD9 /* RobotoBold.ttf */,
 				581DB51A29128C0E00B2DEB7 /* RobotoRegular.ttf */,
 				D836C27D290EEBBC00EF51B3 /* Assets.xcassets */,
 			);
@@ -177,9 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				D8E525392913A09D00551FD9 /* MainScreen.xib */,
-				D8E5253A2913A09D00551FD9 /* RobotoRegular.ttf */,
 				D8E5253B2913A09D00551FD9 /* MainScreen.swift */,
-				D8E5253C2913A09D00551FD9 /* RobotoBold.ttf */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -209,6 +217,26 @@
 				D8E525622913A24D00551FD9 /* LooseVC.xib */,
 			);
 			path = LooseVC;
+			sourceTree = "<group>";
+		};
+		D8E525652913A31900551FD9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D8E525592913A21000551FD9 /* AudioManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D8E525662913A36000551FD9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D8E525682913A37700551FD9 /* correctAnswer.mp3 */,
+				D8E525692913A37700551FD9 /* playerWon.mp3 */,
+				D8E5256B2913A37700551FD9 /* SecondsCount.mp3 */,
+				D8E5256A2913A37700551FD9 /* wait.mp3 */,
+				D8E525672913A37700551FD9 /* wrongAnswer.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,11 +302,15 @@
 				D8E5255E2913A21900551FD9 /* WinVC.xib in Resources */,
 				D836C281290EEBBC00EF51B3 /* LaunchScreen.storyboard in Resources */,
 				D8E5253D2913A09D00551FD9 /* MainScreen.xib in Resources */,
-				D8E5253E2913A09D00551FD9 /* RobotoRegular.ttf in Resources */,
+				D8E525702913A37700551FD9 /* SecondsCount.mp3 in Resources */,
 				581DB519291281F300B2DEB7 /* QuestionListVC.xib in Resources */,
 				D836C27E290EEBBC00EF51B3 /* Assets.xcassets in Resources */,
+				D8E5256E2913A37700551FD9 /* playerWon.mp3 in Resources */,
+				D8E5256D2913A37700551FD9 /* correctAnswer.mp3 in Resources */,
 				D8E525402913A09D00551FD9 /* RobotoBold.ttf in Resources */,
+				D8E5256F2913A37700551FD9 /* wait.mp3 in Resources */,
 				D836C27C290EEBB900EF51B3 /* Main.storyboard in Resources */,
+				D8E5256C2913A37700551FD9 /* wrongAnswer.mp3 in Resources */,
 				D8E5254B2913A0F100551FD9 /* RulesPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +324,7 @@
 			files = (
 				D833F3A52910FF03005A3B7D /* Question.swift in Sources */,
 				D8710A1B29103C0F008E474F /* QuestionsScreenViewController.swift in Sources */,
-				D8E5255A2913A21000551FD9 /* MusicLogic.swift in Sources */,
+				D8E5255A2913A21000551FD9 /* AudioManager.swift in Sources */,
 				D8E5253F2913A09D00551FD9 /* MainScreen.swift in Sources */,
 				D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */,
 				D8E525632913A24D00551FD9 /* LooseVC.swift in Sources */,

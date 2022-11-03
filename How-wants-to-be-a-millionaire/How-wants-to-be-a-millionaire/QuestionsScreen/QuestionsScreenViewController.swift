@@ -28,13 +28,12 @@ class QuestionsScreenViewController: UIViewController {
     @IBOutlet weak var fiftyFiftyImageView: UIImageView!
     
     @IBOutlet weak var progressView: UIProgressView!
-    
     private lazy var lockView = UIView()
     
     var millionaireBrain = MillionaireBrain()
+    private let player = AudioManager()
     private var valueSecond:Float = 30
     private var timer: Timer?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +68,8 @@ class QuestionsScreenViewController: UIViewController {
             return
         }
         
+        player.stopPlay()
+        player.playSound(soundName: "wait")
         lockScreenFromTap(true)
         timer?.invalidate()
         
@@ -76,13 +77,16 @@ class QuestionsScreenViewController: UIViewController {
         let actualAnswer = millionaireBrain.checkAnswer(tag)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.player.stopPlay()
             if actualAnswer.0 {
+                self.player.playSound(soundName: "correctAnswer")
                 sender.view?.backgroundColor = UIColor.green
             } else {
+                self.player.playSound(soundName: "wrongAnswer")
                 self.highlightedCorrectButton(tag: actualAnswer.1)
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.millionaireBrain.nextQuestion()
                 self.updateView()
             }
@@ -116,6 +120,8 @@ class QuestionsScreenViewController: UIViewController {
     }
     
     private func updateView() {
+        player.stopPlay()
+        player.playSound(soundName: "SecondsCount")
         if millionaireBrain.playerMistakeCount() <= 0 {
             timer?.invalidate()
             print("You lose")
