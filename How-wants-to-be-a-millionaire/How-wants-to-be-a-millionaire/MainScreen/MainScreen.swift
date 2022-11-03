@@ -16,7 +16,13 @@ class MainScreen: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    @IBAction func startButton(_ sender: UIButton) {
+        let q = QuestionsScreenViewController()
+        navigationController?.pushViewController(q, animated: true)
+    }
+    
     @IBAction func gameRules(sender: AnyObject) {
         rulesButton.titleLabel?.font = UIFont(name: "Roboto Regular", size: 32)
         let rulesPage = RulesPage(nibName: "RulesPage", bundle: nil)

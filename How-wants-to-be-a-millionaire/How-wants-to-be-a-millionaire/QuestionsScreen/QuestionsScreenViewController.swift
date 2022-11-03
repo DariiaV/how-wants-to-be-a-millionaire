@@ -30,35 +30,34 @@ class QuestionsScreenViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     private lazy var lockView = UIView()
     
-    var millionaireBrain = MillionaireBrain()
+    private var millionaireBrain = MillionaireBrain()
     private let player = AudioManager()
-    private var valueSecond:Float = 30
+    private var valueSecond: Float = 30
     private var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lockView.backgroundColor = .clear
+        navigationController?.setNavigationBarHidden(true, animated: true)
         setupButtons()
         setupImages()
         updateView()
     }
     
-    
     @IBAction func getCashButton(_ sender: UIButton) {
+        // кнопка забрать деньги
         // открыть экран и получить деньги
     }
     
     @objc private func imageViewDidTapped(_ sender: UITapGestureRecognizer) {
         if sender.view?.tag == 1 {
             sender.view?.alpha = 0
-            millionaireBrain.isHallHelpIsActive = false
             showAlert()
         } else if sender.view?.tag == 2 {
-            let removeButtons = millionaireBrain.fiftyFifty()
-            hideButton(tag: removeButtons.remove1)
-            hideButton(tag: removeButtons.remove2)
-            millionaireBrain.isFiftyFiftyIsActive = false
+            let (index1, index2) = millionaireBrain.fiftyFifty()
+            hideButton(index: index1)
+            hideButton(index: index2)
             sender.view?.alpha = 0
         }
     }
@@ -74,26 +73,26 @@ class QuestionsScreenViewController: UIViewController {
         timer?.invalidate()
         
         sender.view?.backgroundColor = UIColor(named: "ButtonChoose")
-        let actualAnswer = millionaireBrain.checkAnswer(tag)
+        let (answer, index) = millionaireBrain.checkAnswerAndGetCurrentIndex(tag)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.player.stopPlay()
-            if actualAnswer.0 {
+            if answer {
                 self.player.playSound(soundName: "correctAnswer")
                 sender.view?.backgroundColor = UIColor.green
             } else {
                 self.player.playSound(soundName: "wrongAnswer")
-                self.highlightedCorrectButton(tag: actualAnswer.1)
+                self.highlightedCorrectButton(tag: index)
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                self.millionaireBrain.nextQuestion()
-                self.updateView()
+                self.checkUserAnswer()
             }
         }
     }
     
     private func highlightedCorrectButton(tag: Int) {
+        // подсветить кнопку по индексу
         switch tag {
         case 0:
             buttonAView.backgroundColor = UIColor.green
@@ -106,8 +105,8 @@ class QuestionsScreenViewController: UIViewController {
         }
     }
     
-    private func hideButton(tag: Int) {
-        switch tag {
+    private func hideButton(index: Int) {
+        switch index {
         case 0:
             buttonAView.alpha = 0
         case 1:
@@ -119,19 +118,19 @@ class QuestionsScreenViewController: UIViewController {
         }
     }
     
-    private func updateView() {
-        player.stopPlay()
-        player.playSound(soundName: "SecondsCount")
+    private func checkUserAnswer() {
         if millionaireBrain.playerMistakeCount() <= 0 {
-            timer?.invalidate()
-            print("You lose")
-            // present final screen
-            // получить несгораемую сумму
-            //            print(millionaireBrain.getFireproofCash())
+            presentQuestionList(true)
             return
         } else if millionaireBrain.playerMistakeCount() <= 1 {
             makeAMistakeImageView.alpha = 0
         }
+        presentQuestionList(false)
+    }
+    
+    private func updateView() {
+        player.stopPlay()
+        player.playSound(soundName: "SecondsCount")
         
         startCountdown()
         lockScreenFromTap(false)
@@ -140,14 +139,22 @@ class QuestionsScreenViewController: UIViewController {
         updateButtonsText()
         setButtonsDefaultColor()
         showButtons()
-        isHintsActive()
         
 //        открываю экран со списком вопросов
-        let questionListVC = QuestionListVC(nibName: "QuestionListVC", bundle: nil)
-        questionListVC.millionaireBrain = millionaireBrain
-        show(questionListVC, sender: nil)
+        
         
     }
+    
+    private func presentQuestionList(_ isLastQuestion: Bool) {
+        player.stopPlay()
+        let questionListVC = QuestionListVC()
+        questionListVC.isLastQuestion = isLastQuestion
+        questionListVC.delegate = self
+        questionListVC.currentQuestion = millionaireBrain.getCurrentNumber()
+        navigationController?.pushViewController(questionListVC, animated: true)
+    }
+    
+//    self.millionaireBrain.nextQuestion()
     
     private func updateHeaderView() {
         questionTextLabel.text = millionaireBrain.getQuestionText()
@@ -176,15 +183,6 @@ class QuestionsScreenViewController: UIViewController {
         buttonDView.alpha = 1
     }
     
-//    если подсказки были использованы, то делаем их невидимыми
-    private func isHintsActive() {
-        if millionaireBrain.isHallHelpIsActive == false {
-            askTheAudienceImageView.alpha = 0 }
-        if millionaireBrain.isFiftyFiftyIsActive == false {
-            fiftyFiftyImageView.alpha = 0
-        }
-    }
-    
     private func lockScreenFromTap(_ isLocked: Bool) {
         if isLocked {
             view.addSubview(lockView)
@@ -204,11 +202,13 @@ class QuestionsScreenViewController: UIViewController {
     
     private func setupButtons() {
         for button in [buttonAView, buttonBView, buttonCView, buttonDView] {
+            // закруглить кнопки
             button?.clipsToBounds = true
             button?.layer.cornerRadius = 20
         }
         
         for button in [buttonAView, buttonBView, buttonCView, buttonDView] {
+            // добавить действие на кнопки
             let tap = UITapGestureRecognizer(target: self, action: #selector(buttonDidTapped(_:)))
             button?.addGestureRecognizer(tap)
         }
@@ -216,6 +216,7 @@ class QuestionsScreenViewController: UIViewController {
     
     private func setupImages() {
         for image in [makeAMistakeImageView, askTheAudienceImageView, fiftyFiftyImageView] {
+//            добавить действие на изображения
             let tap = UITapGestureRecognizer(target: self, action: #selector(imageViewDidTapped(_:)))
             image?.isUserInteractionEnabled = true
             image?.addGestureRecognizer(tap)
@@ -234,7 +235,7 @@ class QuestionsScreenViewController: UIViewController {
     }
     
     private func startCountdown() {
-        let maxSeconds:Float = 30
+        let maxSeconds: Float = 30
         valueSecond = 30
         progressView.progress = valueSecond / maxSeconds
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
@@ -250,3 +251,11 @@ class QuestionsScreenViewController: UIViewController {
 }
 
 
+extension QuestionsScreenViewController: QuestionListVCDelegate {
+    func viewClosed() {
+        millionaireBrain.nextQuestion()
+        updateView()
+    }
+    
+    
+}
