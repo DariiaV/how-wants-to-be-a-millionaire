@@ -74,16 +74,17 @@ struct MillionaireBrain {
         CashPrice(price: 1000000, fireproof: true)
     ]
 
-    var questionNumber = 0
-    var isRightToMakeMistateIsActive = true
-    var isHallHelpIsActive = true
-    var isFiftyFiftyIsActive = true
+    private var questionNumber = 0
     private var mistakeCount = 2
     private var fireproofNumber = 0
     
     
     func getQuestionText() -> String {
         quiz[questionNumber].text
+    }
+    
+    func getCurrentNumber() -> Int {
+        questionNumber
     }
     
     func getQuestionNumberText() -> String {
@@ -110,23 +111,23 @@ struct MillionaireBrain {
         }
     }
     
-    mutating func checkAnswer(_ userAnswer: Int) -> (Bool, Int) {
+    mutating func checkAnswerAndGetCurrentIndex(_ userAnswer: Int) -> (Bool, Int) {
         let answer = getAnswerText(userAnswer) == quiz[questionNumber].correctAnswer
-        if !answer {
-            mistakeCount -= 1
-        }
-        
         return (answer, getIndexOfCurrentAnswer())
     }
+    
+//    func userGetMistake() -> Bool {
+//        mistakeCount -= 1
+//    }
     
     func playerMistakeCount() -> Int {
         mistakeCount
     }
     
-    func fiftyFifty() -> (remove1: Int, remove2: Int) {
-        let answerIndex = getIndexOfCurrentAnswer()
-        let index1 = 0 == answerIndex ? 1 : 0
-        let index2 = 2 == answerIndex ? 3 : 2
+    func fiftyFifty() -> (index1: Int, index2: Int) {
+        let correctIndex = getIndexOfCurrentAnswer()
+        let index1 = 0 == correctIndex ? 1 : 0
+        let index2 = 2 == correctIndex ? 3 : 2
         return (index1, index2)
     }
     

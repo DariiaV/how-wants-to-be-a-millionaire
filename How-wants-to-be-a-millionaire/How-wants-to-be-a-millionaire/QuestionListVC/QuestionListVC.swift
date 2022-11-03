@@ -7,29 +7,28 @@
 
 import UIKit
 
+protocol QuestionListVCDelegate: AnyObject {
+    func viewClosed()
+}
+
 class QuestionListVC: UIViewController {
     
-    @IBOutlet var collectionOfButtons: Array<UIButton>?
+    @IBOutlet var collectionOfButtons: [UIButton]?
     
     @IBOutlet weak var mainLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var secondLeadingConstraint: NSLayoutConstraint!
     
-    var millionaireBrain = MillionaireBrain()
+    var currentQuestion = 0
+    var isLastQuestion = false
+    weak var delegate: QuestionListVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //    меняю левый констрейнт у стеквью при повороте экрана
         setLeftConstraintForMainStackView()
         
-        //        делаю все кнопки неактивными
-        for button in collectionOfButtons ?? [] {
-            button.isEnabled = false
-        }
-        
-        //        делаю активной актуальную кнопку
-        makeActualQuestionButtonActive(actualQuestionNumber: millionaireBrain.questionNumber)
-        
+        setupButtons()
+        setupView()
     }
     
     //    меняю левый констрейнт у стеквью при повороте экрана
@@ -37,7 +36,36 @@ class QuestionListVC: UIViewController {
         setLeftConstraintForMainStackView()
     }
     
+    private func setupView() {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
+        view.addGestureRecognizer(tap)
+    }
     
+    @objc private func viewDidTapped(_ sender: UITapGestureRecognizer) {
+        if isLastQuestion {
+            print("You lose")
+            // present final screen
+            // получить несгораемую сумму
+            //            print(millionaireBrain.getFireproofCash())
+            
+            let looseVC = LooseVC()
+            navigationController?.pushViewController(looseVC, animated: true)
+        } else {
+            navigationController?.popViewController(animated: true)
+            delegate?.viewClosed()
+        }
+    }
+    
+    private func setupButtons() {
+        for button in collectionOfButtons ?? [] {
+            button.isEnabled = false
+        }
+        
+        if let button = collectionOfButtons?[currentQuestion] {
+            button.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
+        }
+    }
     
     @IBAction func questionButton(_ sender: UIButton) {
         
