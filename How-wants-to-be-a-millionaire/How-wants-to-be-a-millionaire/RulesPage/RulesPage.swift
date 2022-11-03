@@ -1,13 +1,13 @@
 //
-//  MainScreen.swift
+//  RulesPage.swift
 //  How-wants-to-be-a-millionaire
 //
-//  Created by Владислав on 31.10.2022.
+//  Created by Владислав on 01.11.2022.
 //
 
 import UIKit
 
-class MainScreen: UIViewController {
+class RulesPage: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
