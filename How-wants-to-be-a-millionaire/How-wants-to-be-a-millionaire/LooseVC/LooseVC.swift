@@ -6,10 +6,11 @@ class LooseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     @IBAction func playAgainPressed(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     /*
