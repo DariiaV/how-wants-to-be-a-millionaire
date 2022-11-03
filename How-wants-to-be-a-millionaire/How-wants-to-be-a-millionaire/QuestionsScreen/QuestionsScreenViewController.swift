@@ -53,11 +53,13 @@ class QuestionsScreenViewController: UIViewController {
     @objc private func imageViewDidTapped(_ sender: UITapGestureRecognizer) {
         if sender.view?.tag == 1 {
             sender.view?.alpha = 0
+            millionaireBrain.isHallHelpIsActive = false
             showAlert()
         } else if sender.view?.tag == 2 {
             let removeButtons = millionaireBrain.fiftyFifty()
             hideButton(tag: removeButtons.remove1)
             hideButton(tag: removeButtons.remove2)
+            millionaireBrain.isFiftyFiftyIsActive = false
             sender.view?.alpha = 0
         }
     }
@@ -132,11 +134,11 @@ class QuestionsScreenViewController: UIViewController {
         updateButtonsText()
         setButtonsDefaultColor()
         showButtons()
+        isHintsActive()
         
-       print(millionaireBrain.questionNumber)
-        
+//        открываю экран со списком вопросов
         let questionListVC = QuestionListVC(nibName: "QuestionListVC", bundle: nil)
-        questionListVC.millionaireBrain.questionNumber = millionaireBrain.questionNumber
+        questionListVC.millionaireBrain = millionaireBrain
         show(questionListVC, sender: nil)
         
     }
@@ -166,6 +168,15 @@ class QuestionsScreenViewController: UIViewController {
         buttonBView.alpha = 1
         buttonCView.alpha = 1
         buttonDView.alpha = 1
+    }
+    
+//    если подсказки были использованы, то делаем их невидимыми
+    private func isHintsActive() {
+        if millionaireBrain.isHallHelpIsActive == false {
+            askTheAudienceImageView.alpha = 0 }
+        if millionaireBrain.isFiftyFiftyIsActive == false {
+            fiftyFiftyImageView.alpha = 0
+        }
     }
     
     private func lockScreenFromTap(_ isLocked: Bool) {

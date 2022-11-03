@@ -44,7 +44,7 @@ class QuestionListVC: UIViewController {
         
 //        перехожу на страницу с вопросами
         let questionsScreenViewController = QuestionsScreenViewController(nibName: "QuestionsScreenViewController", bundle: nil)
-        questionsScreenViewController.millionaireBrain.questionNumber = millionaireBrain.questionNumber
+        questionsScreenViewController.millionaireBrain = millionaireBrain
         show(questionsScreenViewController, sender: nil)
     }
     

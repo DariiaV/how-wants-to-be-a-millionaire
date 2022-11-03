@@ -75,6 +75,9 @@ struct MillionaireBrain {
     ]
 
     var questionNumber = 0
+    var isRightToMakeMistateIsActive = true
+    var isHallHelpIsActive = true
+    var isFiftyFiftyIsActive = true
     private var mistakeCount = 2
     private var fireproofNumber = 0
     
