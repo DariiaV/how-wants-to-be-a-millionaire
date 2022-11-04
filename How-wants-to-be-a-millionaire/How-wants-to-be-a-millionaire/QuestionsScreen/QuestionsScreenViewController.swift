@@ -83,6 +83,7 @@ class QuestionsScreenViewController: UIViewController {
                 self.player.playSound(soundName: "correctAnswer")
                 sender.view?.backgroundColor = UIColor.green
             } else {
+                self.millionaireBrain.userGetMistake()
                 self.player.playSound(soundName: "wrongAnswer")
                 self.highlightedCorrectButton(tag: index)
             }
@@ -121,10 +122,10 @@ class QuestionsScreenViewController: UIViewController {
     }
     
     private func checkUserAnswer() {
-        if millionaireBrain.playerMistakeCount() <= 0 {
+        if millionaireBrain.getMistakeCount() <= 0 {
             presentQuestionList(true)
             return
-        } else if millionaireBrain.playerMistakeCount() <= 1 {
+        } else if millionaireBrain.getMistakeCount() <= 1 {
             makeAMistakeImageView.alpha = 0
         }
         presentQuestionList(false)
