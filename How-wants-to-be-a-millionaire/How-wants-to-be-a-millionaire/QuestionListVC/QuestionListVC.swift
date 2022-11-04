@@ -71,7 +71,6 @@ class QuestionListVC: UIViewController {
         for button in collectionOfButtons ?? [] {
             button.isEnabled = false
         }
-        print(currentQuestion)
         
 //        визуализация перехода к следующей кнопке
         let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
