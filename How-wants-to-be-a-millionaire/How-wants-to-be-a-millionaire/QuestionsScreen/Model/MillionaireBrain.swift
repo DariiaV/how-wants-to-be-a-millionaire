@@ -116,11 +116,11 @@ struct MillionaireBrain {
         return (answer, getIndexOfCurrentAnswer())
     }
     
-//    func userGetMistake() -> Bool {
-//        mistakeCount -= 1
-//    }
+    mutating func userGetMistake() {
+        mistakeCount -= 1
+    }
     
-    func playerMistakeCount() -> Int {
+    func getMistakeCount() -> Int {
         mistakeCount
     }
     
