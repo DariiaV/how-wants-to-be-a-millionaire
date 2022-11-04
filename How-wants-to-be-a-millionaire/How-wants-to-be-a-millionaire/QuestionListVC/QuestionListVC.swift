@@ -18,6 +18,9 @@ class QuestionListVC: UIViewController {
     @IBOutlet weak var mainLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var secondLeadingConstraint: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var mainScrollView: UIScrollView!
+    
     var currentQuestion = 0
     var isLastQuestion = false
     weak var delegate: QuestionListVCDelegate?
@@ -28,6 +31,7 @@ class QuestionListVC: UIViewController {
         
         setupActiveButton()
         setLeftConstraintForMainStackView()
+        moveScrollViewToActiveButton()
         
         setupButtons()
         setupView()
@@ -36,6 +40,7 @@ class QuestionListVC: UIViewController {
     //    меняю левый констрейнт у стеквью при повороте экрана
     override func viewWillTransition(to: CGSize, with: UIViewControllerTransitionCoordinator){
         setLeftConstraintForMainStackView()
+        moveScrollViewToActiveButton()
     }
     
     private func setupActiveButton() {
@@ -72,7 +77,7 @@ class QuestionListVC: UIViewController {
             button.isEnabled = false
         }
         
-//        визуализация перехода к следующей кнопке
+        //        визуализация перехода к следующей кнопке
         let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
         previousQuestionButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
@@ -87,7 +92,7 @@ class QuestionListVC: UIViewController {
         }
     }
     
-
+    
     //    меняю левый констрейнт у стеквью при повороте экрана
     func setLeftConstraintForMainStackView() {
         if UIDevice.current.orientation.isLandscape {
@@ -98,5 +103,17 @@ class QuestionListVC: UIViewController {
             secondLeadingConstraint.priority = UILayoutPriority(rawValue: 750)
         }
     }
+    
+//    прокручиваю скролл вью вниз при открытии экрана если актуальный вопрос меньше 9-ого (когда экран в горизонтальном положении)
+    func moveScrollViewToActiveButton() {
+        if currentQuestion < 6 {
+            let topOffset = CGPointMake(0.0, 400.0)
+            mainScrollView.setContentOffset(topOffset, animated: false)
+        } else if currentQuestion < 9 {
+            let topOffset = CGPointMake(0.0, 150.0)
+            mainScrollView.setContentOffset(topOffset, animated: false)
+        }
+    }
 }
+
 
