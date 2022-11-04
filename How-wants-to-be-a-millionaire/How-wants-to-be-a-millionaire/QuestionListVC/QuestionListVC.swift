@@ -21,10 +21,12 @@ class QuestionListVC: UIViewController {
     var currentQuestion = 0
     var isLastQuestion = false
     weak var delegate: QuestionListVCDelegate?
+    var activeButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupActiveButton()
         setLeftConstraintForMainStackView()
         
         setupButtons()
@@ -36,10 +38,18 @@ class QuestionListVC: UIViewController {
         setLeftConstraintForMainStackView()
     }
     
+    private func setupActiveButton() {
+        print(activeButton)
+        if currentQuestion < 14 {
+            activeButton = view.viewWithTag(currentQuestion + 2) as! UIButton
+        }
+    }
+    
     private func setupView() {
         navigationController?.setNavigationBarHidden(true, animated: true)
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
-        view.addGestureRecognizer(tap)
+        
+        activeButton.addGestureRecognizer(tap)
     }
     
     @objc private func viewDidTapped(_ sender: UITapGestureRecognizer) {
@@ -47,7 +57,7 @@ class QuestionListVC: UIViewController {
             print("You lose")
             // present final screen
             // получить несгораемую сумму
-            //            print(millionaireBrain.getFireproofCash())
+            // print(millionaireBrain.getFireproofCash())
             
             let looseVC = LooseVC()
             navigationController?.pushViewController(looseVC, animated: true)
@@ -61,21 +71,24 @@ class QuestionListVC: UIViewController {
         for button in collectionOfButtons ?? [] {
             button.isEnabled = false
         }
+        print(currentQuestion)
         
-        if let button = collectionOfButtons?[currentQuestion] {
-            button.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
+//        визуализация перехода к следующей кнопке
+        let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
+        previousQuestionButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
+            activeButton.isEnabled = true
+            activeButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
+            if currentQuestion == 4 || currentQuestion == 9 {
+                previousQuestionButton.setImage(UIImage(named: "BlueButtonBackground"), for: .normal)
+            } else {
+                previousQuestionButton.setImage(UIImage(named: "PurpleButtonBackground"), for: .normal)
+            }
+            previousQuestionButton.isEnabled = false
         }
     }
     
-    @IBAction func questionButton(_ sender: UIButton) {
-    }
-    
-    //        делаю активной актуальную кнопку
-    func makeActualQuestionButtonActive (actualQuestionNumber: Int) {
-        let activeButton = view.viewWithTag(actualQuestionNumber) as! UIButton
-        activeButton.isEnabled = true
-    }
-    
+
     //    меняю левый констрейнт у стеквью при повороте экрана
     func setLeftConstraintForMainStackView() {
         if UIDevice.current.orientation.isLandscape {
@@ -86,5 +99,5 @@ class QuestionListVC: UIViewController {
             secondLeadingConstraint.priority = UILayoutPriority(rawValue: 750)
         }
     }
-    
 }
+

@@ -256,6 +256,4 @@ extension QuestionsScreenViewController: QuestionListVCDelegate {
         millionaireBrain.nextQuestion()
         updateView()
     }
-    
-    
 }
