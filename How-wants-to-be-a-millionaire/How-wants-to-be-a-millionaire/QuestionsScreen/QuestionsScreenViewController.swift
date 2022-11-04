@@ -27,6 +27,8 @@ class QuestionsScreenViewController: UIViewController {
     @IBOutlet weak var askTheAudienceImageView: UIImageView!
     @IBOutlet weak var fiftyFiftyImageView: UIImageView!
     
+    @IBOutlet weak var answersStackView: UIStackView!
+    
     @IBOutlet weak var progressView: UIProgressView!
     private lazy var lockView = UIView()
     
@@ -246,6 +248,15 @@ class QuestionsScreenViewController: UIViewController {
             self.valueSecond -= 1
             self.progressView.progress = self.valueSecond / maxSeconds
         })
+    }
+    
+//    меняем спейсинг стак вью с вопросами при повороте экрана
+    override func viewWillTransition(to: CGSize, with: UIViewControllerTransitionCoordinator){
+        if UIDevice.current.orientation.isLandscape {
+            answersStackView.spacing = 6
+        } else {
+            answersStackView.spacing = 25
+        }
     }
     
 }
