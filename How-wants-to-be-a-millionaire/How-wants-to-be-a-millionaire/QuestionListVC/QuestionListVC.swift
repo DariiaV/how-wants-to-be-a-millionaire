@@ -61,6 +61,7 @@ class QuestionListVC: UIViewController {
             
             let looseVC = LooseVC()
             navigationController?.pushViewController(looseVC, animated: true)
+            looseVC.attempt = currentQuestion
         } else {
             navigationController?.popViewController(animated: true)
             delegate?.viewClosed()

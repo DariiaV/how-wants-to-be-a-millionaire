@@ -3,10 +3,13 @@ import UIKit
 class LooseVC: UIViewController {
 
     @IBOutlet weak var attemptLabel: UILabel!
+    var attempt = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        attemptLabel.text = "Вы проиграли на \(attempt + 1) вопросе"
         navigationController?.setNavigationBarHidden(true, animated: true)
+
     }
 
     @IBAction func playAgainPressed(_ sender: UIButton) {
