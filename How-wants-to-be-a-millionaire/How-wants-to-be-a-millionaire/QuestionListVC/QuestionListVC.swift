@@ -33,8 +33,10 @@ class QuestionListVC: UIViewController {
         setLeftConstraintForMainStackView()
         moveScrollViewToActiveButton()
         
-        setupButtons()
+        makeButtonsOff()
+        checkIsLastQuestion()
         setupView()
+        
     }
     
     //    меняю левый констрейнт у стеквью при повороте экрана
@@ -58,26 +60,32 @@ class QuestionListVC: UIViewController {
     }
     
     @objc private func viewDidTapped(_ sender: UITapGestureRecognizer) {
-        if isLastQuestion {
-            print("You lose")
-            // present final screen
-            // получить несгораемую сумму
-            // print(millionaireBrain.getFireproofCash())
-            
-            let looseVC = LooseVC()
-            navigationController?.pushViewController(looseVC, animated: true)
-        } else {
-            navigationController?.popViewController(animated: true)
-            delegate?.viewClosed()
-        }
+        navigationController?.popViewController(animated: true)
+        delegate?.viewClosed()
     }
     
-    private func setupButtons() {
+    private func makeButtonsOff() {
         for button in collectionOfButtons ?? [] {
             button.isEnabled = false
         }
-        
-        //        визуализация перехода к следующей кнопке
+    }
+    
+    private func checkIsLastQuestion(){
+        if isLastQuestion {
+            let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
+            previousQuestionButton.setImage(UIImage(named: "RedButtonBackground"), for: .normal)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {  [self] in
+                let looseVC = LooseVC()
+                navigationController?.pushViewController(looseVC, animated: true)
+            }
+        } else {
+            //            если не проиграл, то подсвечивается и становится активной следующая кнопка
+            makeButtonTransition()
+        }
+    }
+    
+    //        визуализация перехода к следующей кнопке
+    private func makeButtonTransition() {
         let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
         previousQuestionButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
@@ -104,7 +112,7 @@ class QuestionListVC: UIViewController {
         }
     }
     
-//    прокручиваю скролл вью вниз при открытии экрана если актуальный вопрос меньше 9-ого (когда экран в горизонтальном положении)
+    //    прокручиваю скролл вью вниз при открытии экрана если актуальный вопрос меньше 9-ого (когда экран в горизонтальном положении)
     func moveScrollViewToActiveButton() {
         if currentQuestion < 6 {
             let topOffset = CGPointMake(0.0, 400.0)
