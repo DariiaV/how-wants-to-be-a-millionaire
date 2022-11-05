@@ -90,7 +90,9 @@ class QuestionListVC: UIViewController {
         previousQuestionButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
             activeButton.isEnabled = true
-            activeButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
+            currentQuestion < 13
+            ? activeButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
+            : activeButton.setImage(UIImage(named: "GoldButtonBackground"), for: .normal)
             if currentQuestion == 4 || currentQuestion == 9 {
                 previousQuestionButton.setImage(UIImage(named: "BlueButtonBackground"), for: .normal)
             } else {
