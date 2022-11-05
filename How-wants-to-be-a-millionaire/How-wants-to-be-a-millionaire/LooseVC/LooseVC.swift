@@ -3,11 +3,18 @@ import UIKit
 class LooseVC: UIViewController {
 
     @IBOutlet weak var attemptLabel: UILabel!
-    var attempt = 1
+    @IBOutlet weak var finalMoneyLabel: UILabel!
+    @IBOutlet weak var winLoseMessageLabel: UILabel!
+    
+    var winnedMoney = 0
+    
+    var prizeBrain = PrizeBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        attemptLabel.text = "Вы проиграли на \(attempt + 1) вопросе"
+        attemptLabel.text = prizeBrain.printFinalResultText()
+        finalMoneyLabel.text = String(winnedMoney) + "p"
+        winLoseMessageLabel.text = prizeBrain.printWinLoseMessage()
         navigationController?.setNavigationBarHidden(true, animated: true)
 
     }
