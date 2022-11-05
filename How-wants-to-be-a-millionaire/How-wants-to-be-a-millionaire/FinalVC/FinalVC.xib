@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinalVC" customModule="How_wants_to_be_a_millionaire" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinalVC" customModule="Millionaire" customModuleProvider="target">
             <connections>
                 <outlet property="attemptLabel" destination="IG1-aj-jtW" id="DW6-A0-i67"/>
                 <outlet property="finalMoneyLabel" destination="jsf-8I-4Pn" id="APz-En-vK6"/>
@@ -43,7 +43,7 @@
                         <constraint firstAttribute="width" secondItem="IG1-aj-jtW" secondAttribute="height" multiplier="374:181" id="6bl-2d-dRo"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                    <color key="textColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uul-dl-Pud">
@@ -51,7 +51,7 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Uul-dl-Pud" secondAttribute="height" multiplier="293:51" id="bMP-Gi-eKk"/>
                     </constraints>
-                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" subtitle="" titleAlignment="center">
                         <attributedString key="attributedTitle">
@@ -73,7 +73,7 @@
                         <constraint firstAttribute="width" secondItem="jsf-8I-4Pn" secondAttribute="height" multiplier="277:76" id="ygk-dS-dfw"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                    <color key="textColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
