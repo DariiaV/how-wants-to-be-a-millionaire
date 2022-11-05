@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		581DB518291281F300B2DEB7 /* QuestionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581DB516291281F300B2DEB7 /* QuestionListVC.swift */; };
 		581DB519291281F300B2DEB7 /* QuestionListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581DB517291281F300B2DEB7 /* QuestionListVC.xib */; };
+		68D4877929169F0800E8810F /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4877829169F0800E8810F /* Prize.swift */; };
+		68D4877B2916A2CD00E8810F /* PrizeBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4877A2916A2CD00E8810F /* PrizeBrain.swift */; };
 		D833F3A52910FF03005A3B7D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D833F3A42910FF03005A3B7D /* Question.swift */; };
 		D833F3A72910FFE9005A3B7D /* MillionaireBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D833F3A62910FFE9005A3B7D /* MillionaireBrain.swift */; };
 		D833F3A92911102B005A3B7D /* CashPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D833F3A82911102B005A3B7D /* CashPrice.swift */; };
@@ -41,6 +43,8 @@
 		581DB516291281F300B2DEB7 /* QuestionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListVC.swift; sourceTree = "<group>"; };
 		581DB517291281F300B2DEB7 /* QuestionListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionListVC.xib; sourceTree = "<group>"; };
 		581DB51A29128C0E00B2DEB7 /* RobotoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoRegular.ttf; sourceTree = "<group>"; };
+		68D4877829169F0800E8810F /* Prize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
+		68D4877A2916A2CD00E8810F /* PrizeBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeBrain.swift; sourceTree = "<group>"; };
 		D833F3A42910FF03005A3B7D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D833F3A62910FFE9005A3B7D /* MillionaireBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionaireBrain.swift; sourceTree = "<group>"; };
 		D833F3A82911102B005A3B7D /* CashPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashPrice.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 				D833F3A42910FF03005A3B7D /* Question.swift */,
 				D833F3A82911102B005A3B7D /* CashPrice.swift */,
 				D833F3A62910FFE9005A3B7D /* MillionaireBrain.swift */,
+				68D4877829169F0800E8810F /* Prize.swift */,
+				68D4877A2916A2CD00E8810F /* PrizeBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,10 +334,12 @@
 				D8E5253F2913A09D00551FD9 /* MainScreen.swift in Sources */,
 				D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */,
 				D8E525632913A24D00551FD9 /* LooseVC.swift in Sources */,
+				68D4877B2916A2CD00E8810F /* PrizeBrain.swift in Sources */,
 				D8E5255F2913A21900551FD9 /* WinVC.swift in Sources */,
 				D833F3A72910FFE9005A3B7D /* MillionaireBrain.swift in Sources */,
 				581DB518291281F300B2DEB7 /* QuestionListVC.swift in Sources */,
 				D8E5254C2913A0F100551FD9 /* RulesPage.swift in Sources */,
+				68D4877929169F0800E8810F /* Prize.swift in Sources */,
 				D833F3A92911102B005A3B7D /* CashPrice.swift in Sources */,
 				D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */,
 				D836C277290EEBB900EF51B3 /* SceneDelegate.swift in Sources */,
