@@ -24,6 +24,7 @@
                 <outlet property="buttonDView" destination="Tax-Ff-fgc" id="WnJ-si-DFz"/>
                 <outlet property="cashLabel" destination="tmy-Rq-75N" id="aU5-Nj-pRD"/>
                 <outlet property="fiftyFiftyImageView" destination="c3x-RW-WDG" id="tyb-ee-ads"/>
+                <outlet property="getCashOutlet" destination="Mnt-7r-4AU" id="WOa-po-FGQ"/>
                 <outlet property="makeAMistakeImageView" destination="Xfh-dG-9UY" id="E3f-p4-9pl"/>
                 <outlet property="progressView" destination="evg-kj-lvg" id="VZJ-Az-eCd"/>
                 <outlet property="questionNumberLabel" destination="WHQ-DJ-ga7" id="27u-ji-MC9"/>

@@ -150,13 +150,11 @@ struct MillionaireBrain {
         }
     }
     
-    func getFireproofCash() -> String {
+    func getFireproofCash() -> Int {
         if fireproofNumber == 0 {
-            return "0 RUB"
+            return 0
         } else {
-            return "\(cashPrices[fireproofNumber].price) RUB"
+            return cashPrices[fireproofNumber].price
         }
     }
-    
-    
 }
