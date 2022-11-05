@@ -28,6 +28,7 @@ class QuestionsScreenViewController: UIViewController {
     @IBOutlet weak var fiftyFiftyImageView: UIImageView!
     
     @IBOutlet weak var answersStackView: UIStackView!
+    @IBOutlet weak var getCashOutlet: UIButton!
     
     @IBOutlet weak var progressView: UIProgressView!
     private lazy var lockView = UIView()
@@ -45,11 +46,27 @@ class QuestionsScreenViewController: UIViewController {
         setupButtons()
         setupImages()
         updateView()
+        
     }
     
     @IBAction func getCashButton(_ sender: UIButton) {
         // кнопка забрать деньги
         // открыть экран и получить деньги
+        
+        let alertController = UIAlertController(title: "Забрать деньги", message: "Вы хотите забрать несгораеммую сумму - \(millionaireBrain.getFireproofCash()) RUB?", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Да", style: .default) { (action) in
+            self.timer?.invalidate()
+            self.player.stopPlay()
+            let looseVC = LooseVC()
+            self.navigationController?.pushViewController(looseVC, animated: true)
+        }
+        
+        let cancel = UIAlertAction(title: "Отмена", style: .default) { (action) in }
+        
+        alertController.addAction(action)
+        alertController.addAction(cancel)
+        self.present(alertController, animated: true)
     }
     
     @objc private func imageViewDidTapped(_ sender: UITapGestureRecognizer) {
@@ -143,9 +160,7 @@ class QuestionsScreenViewController: UIViewController {
         setButtonsDefaultColor()
         showButtons()
         
-//        открываю экран со списком вопросов
-        
-        
+        makeGetCashButtonActiveOrNot()
     }
     
     private func presentQuestionList(_ isLastQuestion: Bool) {
@@ -184,6 +199,15 @@ class QuestionsScreenViewController: UIViewController {
         buttonBView.alpha = 1
         buttonCView.alpha = 1
         buttonDView.alpha = 1
+    }
+    
+//    если у игрока есть несгораемая сумма, то кнопка "Забрать деньги" активна. Иначе она неактивна
+    private func makeGetCashButtonActiveOrNot() {
+        if millionaireBrain.getFireproofCash() == 0 {
+            getCashOutlet.isEnabled = false
+        } else {
+            getCashOutlet.isEnabled = true
+        }
     }
     
     private func lockScreenFromTap(_ isLocked: Bool) {
