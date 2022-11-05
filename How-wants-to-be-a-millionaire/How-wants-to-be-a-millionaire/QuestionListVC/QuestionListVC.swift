@@ -60,8 +60,8 @@ class QuestionListVC: UIViewController {
             // print(millionaireBrain.getFireproofCash())
             
             let looseVC = LooseVC()
-            navigationController?.pushViewController(looseVC, animated: true)
             looseVC.attempt = currentQuestion
+            navigationController?.pushViewController(looseVC, animated: true)
         } else {
             navigationController?.popViewController(animated: true)
             delegate?.viewClosed()
