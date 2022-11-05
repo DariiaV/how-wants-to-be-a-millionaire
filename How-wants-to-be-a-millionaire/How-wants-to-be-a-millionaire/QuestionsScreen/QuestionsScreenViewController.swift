@@ -58,8 +58,10 @@ class QuestionsScreenViewController: UIViewController {
         let action = UIAlertAction(title: "Да", style: .default) { (action) in
             self.timer?.invalidate()
             self.player.stopPlay()
-            let looseVC = LooseVC()
-            self.navigationController?.pushViewController(looseVC, animated: true)
+            let finalVC = FinalVC()
+            finalVC.winnedMoney = self.millionaireBrain.getFireproofCash()
+            finalVC.prizeBrain.printTakeMoney()
+            self.navigationController?.pushViewController(finalVC, animated: true)
         }
         
         let cancel = UIAlertAction(title: "Отмена", style: .default) { (action) in }
@@ -145,8 +147,9 @@ class QuestionsScreenViewController: UIViewController {
         } else if millionaireBrain.getMistakeCount() <= 1 {
             makeAMistakeImageView.alpha = 0
         }
-        presentQuestionList(false)
+        millionaireBrain.getCurrentNumber() < 14 ? presentQuestionList(false) : openWinVC()
     }
+    
     
     private func updateView() {
         player.stopPlay()
@@ -172,7 +175,14 @@ class QuestionsScreenViewController: UIViewController {
         navigationController?.pushViewController(questionListVC, animated: true)
     }
     
-//    self.millionaireBrain.nextQuestion()
+    private func openWinVC() {
+        let finalVC = FinalVC()
+        finalVC.winnedMoney = self.millionaireBrain.getCashNumber()
+        finalVC.prizeBrain.printTotalWin()
+        self.navigationController?.pushViewController(finalVC, animated: true)
+    }
+    
+    //    self.millionaireBrain.nextQuestion()
     
     private func updateHeaderView() {
         questionTextLabel.text = millionaireBrain.getQuestionText()
@@ -201,7 +211,7 @@ class QuestionsScreenViewController: UIViewController {
         buttonDView.alpha = 1
     }
     
-//    если у игрока есть несгораемая сумма, то кнопка "Забрать деньги" активна. Иначе она неактивна
+    //    если у игрока есть несгораемая сумма, то кнопка "Забрать деньги" активна. Иначе она неактивна
     private func makeGetCashButtonActiveOrNot() {
         if millionaireBrain.getFireproofCash() == 0 {
             getCashOutlet.isEnabled = false
@@ -243,7 +253,7 @@ class QuestionsScreenViewController: UIViewController {
     
     private func setupImages() {
         for image in [makeAMistakeImageView, askTheAudienceImageView, fiftyFiftyImageView] {
-//            добавить действие на изображения
+            //            добавить действие на изображения
             let tap = UITapGestureRecognizer(target: self, action: #selector(imageViewDidTapped(_:)))
             image?.isUserInteractionEnabled = true
             image?.addGestureRecognizer(tap)
@@ -269,13 +279,16 @@ class QuestionsScreenViewController: UIViewController {
             if self.valueSecond == 0 {
                 self.timer?.invalidate()
                 // проигрыш
+                let looseVC = FinalVC()
+                looseVC.winnedMoney = self.millionaireBrain.getFireproofCash()
+                self.navigationController?.pushViewController(looseVC, animated: true)
             }
             self.valueSecond -= 1
             self.progressView.progress = self.valueSecond / maxSeconds
         })
     }
     
-//    меняем спейсинг стак вью с вопросами при повороте экрана
+    //    меняем спейсинг стак вью с вопросами при повороте экрана
     override func viewWillTransition(to: CGSize, with: UIViewControllerTransitionCoordinator){
         if UIDevice.current.orientation.isLandscape {
             answersStackView.spacing = 6

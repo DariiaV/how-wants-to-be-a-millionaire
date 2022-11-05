@@ -95,6 +95,10 @@ struct MillionaireBrain {
         "\(cashPrices[questionNumber].price) RUB"
     }
     
+    func getCashNumber() -> Int {
+        cashPrices[questionNumber].price
+    }
+    
     func getAnswerText(_ number: Int) -> String {
         quiz[questionNumber].answer[number]
     }

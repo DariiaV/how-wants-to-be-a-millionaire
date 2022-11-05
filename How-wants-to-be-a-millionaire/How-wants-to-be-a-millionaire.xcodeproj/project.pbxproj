@@ -16,7 +16,6 @@
 		D833F3A92911102B005A3B7D /* CashPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D833F3A82911102B005A3B7D /* CashPrice.swift */; };
 		D836C275290EEBB900EF51B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C274290EEBB900EF51B3 /* AppDelegate.swift */; };
 		D836C277290EEBB900EF51B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C276290EEBB900EF51B3 /* SceneDelegate.swift */; };
-		D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836C278290EEBB900EF51B3 /* ViewController.swift */; };
 		D836C27C290EEBB900EF51B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D836C27A290EEBB900EF51B3 /* Main.storyboard */; };
 		D836C27E290EEBBC00EF51B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D836C27D290EEBBC00EF51B3 /* Assets.xcassets */; };
 		D836C281290EEBBC00EF51B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D836C27F290EEBBC00EF51B3 /* LaunchScreen.storyboard */; };
@@ -28,10 +27,8 @@
 		D8E5254B2913A0F100551FD9 /* RulesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525492913A0F100551FD9 /* RulesPage.xib */; };
 		D8E5254C2913A0F100551FD9 /* RulesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5254A2913A0F100551FD9 /* RulesPage.swift */; };
 		D8E5255A2913A21000551FD9 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E525592913A21000551FD9 /* AudioManager.swift */; };
-		D8E5255E2913A21900551FD9 /* WinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E5255C2913A21900551FD9 /* WinVC.xib */; };
-		D8E5255F2913A21900551FD9 /* WinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5255D2913A21900551FD9 /* WinVC.swift */; };
-		D8E525632913A24D00551FD9 /* LooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E525612913A24D00551FD9 /* LooseVC.swift */; };
-		D8E525642913A24D00551FD9 /* LooseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525622913A24D00551FD9 /* LooseVC.xib */; };
+		D8E525632913A24D00551FD9 /* FinalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E525612913A24D00551FD9 /* FinalVC.swift */; };
+		D8E525642913A24D00551FD9 /* FinalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E525622913A24D00551FD9 /* FinalVC.xib */; };
 		D8E5256C2913A37700551FD9 /* wrongAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8E525672913A37700551FD9 /* wrongAnswer.mp3 */; };
 		D8E5256D2913A37700551FD9 /* correctAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8E525682913A37700551FD9 /* correctAnswer.mp3 */; };
 		D8E5256E2913A37700551FD9 /* playerWon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8E525692913A37700551FD9 /* playerWon.mp3 */; };
@@ -48,10 +45,9 @@
 		D833F3A42910FF03005A3B7D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D833F3A62910FFE9005A3B7D /* MillionaireBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionaireBrain.swift; sourceTree = "<group>"; };
 		D833F3A82911102B005A3B7D /* CashPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashPrice.swift; sourceTree = "<group>"; };
-		D836C271290EEBB900EF51B3 /* How-wants-to-be-a-millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How-wants-to-be-a-millionaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D836C271290EEBB900EF51B3 /* Millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D836C274290EEBB900EF51B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D836C276290EEBB900EF51B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D836C278290EEBB900EF51B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D836C27B290EEBB900EF51B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D836C27D290EEBBC00EF51B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D836C280290EEBBC00EF51B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,10 +60,8 @@
 		D8E525492913A0F100551FD9 /* RulesPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RulesPage.xib; sourceTree = "<group>"; };
 		D8E5254A2913A0F100551FD9 /* RulesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesPage.swift; sourceTree = "<group>"; };
 		D8E525592913A21000551FD9 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		D8E5255C2913A21900551FD9 /* WinVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinVC.xib; sourceTree = "<group>"; };
-		D8E5255D2913A21900551FD9 /* WinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinVC.swift; sourceTree = "<group>"; };
-		D8E525612913A24D00551FD9 /* LooseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LooseVC.swift; sourceTree = "<group>"; };
-		D8E525622913A24D00551FD9 /* LooseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LooseVC.xib; sourceTree = "<group>"; };
+		D8E525612913A24D00551FD9 /* FinalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalVC.swift; sourceTree = "<group>"; };
+		D8E525622913A24D00551FD9 /* FinalVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalVC.xib; sourceTree = "<group>"; };
 		D8E525672913A37700551FD9 /* wrongAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrongAnswer.mp3; sourceTree = "<group>"; };
 		D8E525682913A37700551FD9 /* correctAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correctAnswer.mp3; sourceTree = "<group>"; };
 		D8E525692913A37700551FD9 /* playerWon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playerWon.mp3; sourceTree = "<group>"; };
@@ -95,14 +89,21 @@
 			path = QuestionListVC;
 			sourceTree = "<group>";
 		};
+		588D605E2916F76C00A1261A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68D4877829169F0800E8810F /* Prize.swift */,
+				68D4877A2916A2CD00E8810F /* PrizeBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D833F3A32910FEC1005A3B7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D833F3A42910FF03005A3B7D /* Question.swift */,
 				D833F3A82911102B005A3B7D /* CashPrice.swift */,
 				D833F3A62910FFE9005A3B7D /* MillionaireBrain.swift */,
-				68D4877829169F0800E8810F /* Prize.swift */,
-				68D4877A2916A2CD00E8810F /* PrizeBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,7 +119,7 @@
 		D836C272290EEBB900EF51B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D836C271290EEBB900EF51B3 /* How-wants-to-be-a-millionaire.app */,
+				D836C271290EEBB900EF51B3 /* Millionaire.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,18 +127,16 @@
 		D836C273290EEBB900EF51B3 /* How-wants-to-be-a-millionaire */ = {
 			isa = PBXGroup;
 			children = (
-				D8E525662913A36000551FD9 /* Sounds */,
-				D8E525652913A31900551FD9 /* Helpers */,
-				D836C28A290EEC4D00EF51B3 /* ApplicationLayer */,
-				D8E525602913A24D00551FD9 /* LooseVC */,
 				D8E525382913A09D00551FD9 /* MainScreen */,
-				581DB515291281E200B2DEB7 /* QuestionListVC */,
-				D8710A1829103BE8008E474F /* QuestionsScreen */,
-				D836C28B290EED4100EF51B3 /* Resources */,
 				D8E525482913A0F100551FD9 /* RulesPage */,
+				D8710A1829103BE8008E474F /* QuestionsScreen */,
+				581DB515291281E200B2DEB7 /* QuestionListVC */,
+				D8E525602913A24D00551FD9 /* FinalVC */,
+				D836C28B290EED4100EF51B3 /* Resources */,
+				D8E525662913A36000551FD9 /* Sounds */,
+				D836C28A290EEC4D00EF51B3 /* ApplicationLayer */,
+				D8E525652913A31900551FD9 /* Helpers */,
 				D836C288290EEC2100EF51B3 /* Storyboards */,
-				D836C289290EEC2E00EF51B3 /* ViewControllers */,
-				D8E5255B2913A21900551FD9 /* WinVC */,
 			);
 			path = "How-wants-to-be-a-millionaire";
 			sourceTree = "<group>";
@@ -149,14 +148,6 @@
 				D836C27F290EEBBC00EF51B3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		D836C289290EEC2E00EF51B3 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				D836C278290EEBB900EF51B3 /* ViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D836C28A290EEC4D00EF51B3 /* ApplicationLayer */ = {
@@ -207,22 +198,14 @@
 			path = RulesPage;
 			sourceTree = "<group>";
 		};
-		D8E5255B2913A21900551FD9 /* WinVC */ = {
+		D8E525602913A24D00551FD9 /* FinalVC */ = {
 			isa = PBXGroup;
 			children = (
-				D8E5255C2913A21900551FD9 /* WinVC.xib */,
-				D8E5255D2913A21900551FD9 /* WinVC.swift */,
+				588D605E2916F76C00A1261A /* Model */,
+				D8E525612913A24D00551FD9 /* FinalVC.swift */,
+				D8E525622913A24D00551FD9 /* FinalVC.xib */,
 			);
-			path = WinVC;
-			sourceTree = "<group>";
-		};
-		D8E525602913A24D00551FD9 /* LooseVC */ = {
-			isa = PBXGroup;
-			children = (
-				D8E525612913A24D00551FD9 /* LooseVC.swift */,
-				D8E525622913A24D00551FD9 /* LooseVC.xib */,
-			);
-			path = LooseVC;
+			path = FinalVC;
 			sourceTree = "<group>";
 		};
 		D8E525652913A31900551FD9 /* Helpers */ = {
@@ -262,7 +245,7 @@
 			);
 			name = "How-wants-to-be-a-millionaire";
 			productName = "How-wants-to-be-a-millionaire";
-			productReference = D836C271290EEBB900EF51B3 /* How-wants-to-be-a-millionaire.app */;
+			productReference = D836C271290EEBB900EF51B3 /* Millionaire.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -304,8 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8710A1C29103C0F008E474F /* QuestionsScreenViewController.xib in Resources */,
-				D8E525642913A24D00551FD9 /* LooseVC.xib in Resources */,
-				D8E5255E2913A21900551FD9 /* WinVC.xib in Resources */,
+				D8E525642913A24D00551FD9 /* FinalVC.xib in Resources */,
 				D836C281290EEBBC00EF51B3 /* LaunchScreen.storyboard in Resources */,
 				D8E5253D2913A09D00551FD9 /* MainScreen.xib in Resources */,
 				D8E525702913A37700551FD9 /* SecondsCount.mp3 in Resources */,
@@ -332,10 +314,8 @@
 				D8710A1B29103C0F008E474F /* QuestionsScreenViewController.swift in Sources */,
 				D8E5255A2913A21000551FD9 /* AudioManager.swift in Sources */,
 				D8E5253F2913A09D00551FD9 /* MainScreen.swift in Sources */,
-				D836C279290EEBB900EF51B3 /* ViewController.swift in Sources */,
-				D8E525632913A24D00551FD9 /* LooseVC.swift in Sources */,
+				D8E525632913A24D00551FD9 /* FinalVC.swift in Sources */,
 				68D4877B2916A2CD00E8810F /* PrizeBrain.swift in Sources */,
-				D8E5255F2913A21900551FD9 /* WinVC.swift in Sources */,
 				D833F3A72910FFE9005A3B7D /* MillionaireBrain.swift in Sources */,
 				581DB518291281F300B2DEB7 /* QuestionListVC.swift in Sources */,
 				D8E5254C2913A0F100551FD9 /* RulesPage.swift in Sources */,
@@ -506,7 +486,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = negamr;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Millionaire;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -537,7 +517,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = negamr;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Millionaire;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -1,6 +1,6 @@
 import UIKit
 
-class LooseVC: UIViewController {
+class FinalVC: UIViewController {
 
     @IBOutlet weak var attemptLabel: UILabel!
     @IBOutlet weak var finalMoneyLabel: UILabel!
@@ -9,7 +9,7 @@ class LooseVC: UIViewController {
 //    В эту переменную должно передаваться количество выйгранных денег
     var winnedMoney = 0
     
-    private var prizeBrain = PrizeBrain()
+    var prizeBrain = PrizeBrain()
     
 //    Три лейбла - attemptLabel, который содержит основное сообщение, finalMoneyLabel, который отображается количество денег и winLoseMessageLabel, отображающий три сообщения о победе или проигрыше
     
@@ -17,7 +17,6 @@ class LooseVC: UIViewController {
         super.viewDidLoad()
         attemptLabel.text = prizeBrain.printFinalResultText()
         finalMoneyLabel.text = String(winnedMoney) + "p"
-        winLoseMessageLabel.text = prizeBrain.printWinLoseMessage()
         navigationController?.setNavigationBarHidden(true, animated: true)
 
     }

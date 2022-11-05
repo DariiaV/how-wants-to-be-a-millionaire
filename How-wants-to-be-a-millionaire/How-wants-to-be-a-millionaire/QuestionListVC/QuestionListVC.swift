@@ -75,8 +75,8 @@ class QuestionListVC: UIViewController {
             let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
             previousQuestionButton.setImage(UIImage(named: "RedButtonBackground"), for: .normal)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {  [self] in
-                let looseVC = LooseVC()
-                navigationController?.pushViewController(looseVC, animated: true)
+                let finalVC = FinalVC()
+                navigationController?.pushViewController(finalVC, animated: true)
             }
         } else {
             //            если не проиграл, то подсвечивается и становится активной следующая кнопка
@@ -90,7 +90,9 @@ class QuestionListVC: UIViewController {
         previousQuestionButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
             activeButton.isEnabled = true
-            activeButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
+            currentQuestion < 13
+            ? activeButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
+            : activeButton.setImage(UIImage(named: "GoldButtonBackground"), for: .normal)
             if currentQuestion == 4 || currentQuestion == 9 {
                 previousQuestionButton.setImage(UIImage(named: "BlueButtonBackground"), for: .normal)
             } else {
