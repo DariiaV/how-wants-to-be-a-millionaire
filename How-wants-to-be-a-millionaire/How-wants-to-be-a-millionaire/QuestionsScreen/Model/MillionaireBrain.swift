@@ -95,8 +95,12 @@ struct MillionaireBrain {
         "\(cashPrices[questionNumber].price) RUB"
     }
     
-    func getCashNumber() -> Int {
-        cashPrices[questionNumber].price
+    func getCashNumber(state: GameState) -> Int {
+        if state == .getMoney {
+           return cashPrices[questionNumber - 1].price
+        } else {
+          return  cashPrices[questionNumber].price
+        }
     }
     
     func getAnswerText(_ number: Int) -> String {

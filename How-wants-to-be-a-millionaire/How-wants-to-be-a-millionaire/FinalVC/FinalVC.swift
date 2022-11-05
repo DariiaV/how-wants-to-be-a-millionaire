@@ -9,19 +9,25 @@ class FinalVC: UIViewController {
 //    В эту переменную должно передаваться количество выйгранных денег
     var winnedMoney = 0
     
-    var prizeBrain = PrizeBrain()
+    private var prizeBrain = PrizeBrain()
+    private let player = AudioManager()
+    
+    var state = GameState.getMoney
     
 //    Три лейбла - attemptLabel, который содержит основное сообщение, finalMoneyLabel, который отображается количество денег и winLoseMessageLabel, отображающий три сообщения о победе или проигрыше
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        attemptLabel.text = prizeBrain.printFinalResultText()
+        attemptLabel.text = prizeBrain.getFinalResultText(state: state)
         finalMoneyLabel.text = String(winnedMoney) + "p"
         navigationController?.setNavigationBarHidden(true, animated: true)
-
+        if state == .win {
+            player.playSound(soundName: "playerWon")
+        }
     }
 
     @IBAction func playAgainPressed(_ sender: UIButton) {
+        player.stopPlay()
         navigationController?.popToRootViewController(animated: true)
     }
     

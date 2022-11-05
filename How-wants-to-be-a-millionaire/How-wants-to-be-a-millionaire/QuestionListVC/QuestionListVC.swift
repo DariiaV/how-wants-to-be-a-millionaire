@@ -22,9 +22,11 @@ class QuestionListVC: UIViewController {
     @IBOutlet weak var mainScrollView: UIScrollView!
     
     var currentQuestion = 0
-    var isLastQuestion = false
+    var state = GameState.nextQuestion
     weak var delegate: QuestionListVCDelegate?
     var activeButton = UIButton()
+    var fireproofCash = 0
+    var cash = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,11 +73,20 @@ class QuestionListVC: UIViewController {
     }
     
     private func checkIsLastQuestion(){
-        if isLastQuestion {
+        if state == .lose {
             let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
             previousQuestionButton.setImage(UIImage(named: "RedButtonBackground"), for: .normal)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {  [self] in
                 let finalVC = FinalVC()
+                finalVC.state = state
+                finalVC.winnedMoney = fireproofCash
+                navigationController?.pushViewController(finalVC, animated: true)
+            }
+        } else if state == .getMoney {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {  [self] in
+                let finalVC = FinalVC()
+                finalVC.state = state
+                finalVC.winnedMoney = cash
                 navigationController?.pushViewController(finalVC, animated: true)
             }
         } else {
@@ -99,10 +110,18 @@ class QuestionListVC: UIViewController {
                 previousQuestionButton.setImage(UIImage(named: "PurpleButtonBackground"), for: .normal)
             }
             previousQuestionButton.isEnabled = false
+            self.userWin()
         }
     }
     
-    
+    private func userWin() {
+        if state == .win {
+            let finalVC = FinalVC()
+            finalVC.state = state
+            finalVC.winnedMoney = cash
+            navigationController?.pushViewController(finalVC, animated: true)
+        }
+    }
     //    меняю левый констрейнт у стеквью при повороте экрана
     func setLeftConstraintForMainStackView() {
         if UIDevice.current.orientation.isLandscape {

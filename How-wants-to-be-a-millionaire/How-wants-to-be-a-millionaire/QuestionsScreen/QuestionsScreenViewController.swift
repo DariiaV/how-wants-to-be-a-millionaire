@@ -28,7 +28,7 @@ class QuestionsScreenViewController: UIViewController {
     @IBOutlet weak var fiftyFiftyImageView: UIImageView!
     
     @IBOutlet weak var answersStackView: UIStackView!
-    @IBOutlet weak var getCashOutlet: UIButton!
+    @IBOutlet weak var getCashButton: UIButton!
     
     @IBOutlet weak var progressView: UIProgressView!
     private lazy var lockView = UIView()
@@ -37,6 +37,7 @@ class QuestionsScreenViewController: UIViewController {
     private let player = AudioManager()
     private var valueSecond: Float = 30
     private var timer: Timer?
+    private var state = GameState.nextQuestion
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +59,9 @@ class QuestionsScreenViewController: UIViewController {
         let action = UIAlertAction(title: "Да", style: .default) { (action) in
             self.timer?.invalidate()
             self.player.stopPlay()
-            let finalVC = FinalVC()
-            finalVC.winnedMoney = self.millionaireBrain.getFireproofCash()
-            finalVC.prizeBrain.printTakeMoney()
-            self.navigationController?.pushViewController(finalVC, animated: true)
+            self.state = .getMoney
+            self.presentQuestionList()
+    
         }
         
         let cancel = UIAlertAction(title: "Отмена", style: .default) { (action) in }
@@ -142,12 +142,13 @@ class QuestionsScreenViewController: UIViewController {
     
     private func checkUserAnswer() {
         if millionaireBrain.getMistakeCount() <= 0 {
-            presentQuestionList(true)
-            return
+            state = .lose
         } else if millionaireBrain.getMistakeCount() <= 1 {
             makeAMistakeImageView.alpha = 0
+        } else if millionaireBrain.getCurrentNumber() >= 14 {
+            state = .win
         }
-        millionaireBrain.getCurrentNumber() < 14 ? presentQuestionList(false) : openWinVC()
+        presentQuestionList()
     }
     
     
@@ -166,24 +167,17 @@ class QuestionsScreenViewController: UIViewController {
         makeGetCashButtonActiveOrNot()
     }
     
-    private func presentQuestionList(_ isLastQuestion: Bool) {
+    private func presentQuestionList() {
         player.stopPlay()
         let questionListVC = QuestionListVC()
-        questionListVC.isLastQuestion = isLastQuestion
+        questionListVC.state = state
         questionListVC.delegate = self
+        questionListVC.cash = millionaireBrain.getCashNumber()
+        questionListVC.fireproofCash = millionaireBrain.getFireproofCash()
         questionListVC.currentQuestion = millionaireBrain.getCurrentNumber()
         navigationController?.pushViewController(questionListVC, animated: true)
     }
-    
-    private func openWinVC() {
-        let finalVC = FinalVC()
-        finalVC.winnedMoney = self.millionaireBrain.getCashNumber()
-        finalVC.prizeBrain.printTotalWin()
-        self.navigationController?.pushViewController(finalVC, animated: true)
-    }
-    
-    //    self.millionaireBrain.nextQuestion()
-    
+ 
     private func updateHeaderView() {
         questionTextLabel.text = millionaireBrain.getQuestionText()
         questionNumberLabel.text = millionaireBrain.getQuestionNumberText()
@@ -214,9 +208,9 @@ class QuestionsScreenViewController: UIViewController {
     //    если у игрока есть несгораемая сумма, то кнопка "Забрать деньги" активна. Иначе она неактивна
     private func makeGetCashButtonActiveOrNot() {
         if millionaireBrain.getFireproofCash() == 0 {
-            getCashOutlet.isEnabled = false
+            getCashButton.isEnabled = false
         } else {
-            getCashOutlet.isEnabled = true
+            getCashButton.isEnabled = true
         }
     }
     
