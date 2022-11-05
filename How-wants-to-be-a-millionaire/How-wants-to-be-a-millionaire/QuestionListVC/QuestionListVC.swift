@@ -115,10 +115,10 @@ class QuestionListVC: UIViewController {
     //    прокручиваю скролл вью вниз при открытии экрана если актуальный вопрос меньше 9-ого (когда экран в горизонтальном положении)
     func moveScrollViewToActiveButton() {
         if currentQuestion < 6 {
-            let topOffset = CGPointMake(0.0, 400.0)
+            let topOffset = CGPoint(x: 0, y: 400)
             mainScrollView.setContentOffset(topOffset, animated: false)
         } else if currentQuestion < 9 {
-            let topOffset = CGPointMake(0.0, 150.0)
+            let topOffset = CGPoint(x: 0, y: 150)
             mainScrollView.setContentOffset(topOffset, animated: false)
         }
     }
