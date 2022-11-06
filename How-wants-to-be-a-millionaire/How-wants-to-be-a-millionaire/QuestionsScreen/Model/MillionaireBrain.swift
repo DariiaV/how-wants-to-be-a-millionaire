@@ -74,7 +74,7 @@ struct MillionaireBrain {
         CashPrice(price: 1000000, fireproof: true)
     ]
 
-    private var questionNumber = 0
+    private var questionNumber = 5
     private var mistakeCount = 2
     private var fireproofNumber = 0
     
@@ -97,9 +97,11 @@ struct MillionaireBrain {
     
     func getCashNumber(state: GameState) -> Int {
         if state == .getMoney {
-           return cashPrices[questionNumber - 1].price
+            return cashPrices[questionNumber - 1].price
+        } else if state == .lose && fireproofNumber != 0 {
+            return cashPrices[fireproofNumber].price
         } else {
-          return  cashPrices[questionNumber].price
+            return  cashPrices[questionNumber].price
         }
     }
     

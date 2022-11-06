@@ -76,13 +76,9 @@ class QuestionListVC: UIViewController {
     }
     
     private func checkIsLastQuestion(){
-        if state == .nextQuestion {
+        if state == .lose {
             let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
             previousQuestionButton.setImage(UIImage(named: "RedButtonBackground"), for: .normal)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {  [self] in
-                let finalVC = FinalVC()
-                navigationController?.pushViewController(finalVC, animated: true)
-            }
         } else {
             //            если не проиграл, то подсвечивается и становится активной следующая кнопка
             makeButtonTransition()
@@ -93,14 +89,18 @@ class QuestionListVC: UIViewController {
     private func makeButtonTransition() {
         let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
         previousQuestionButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
-           
-            if currentQuestion == 4 || currentQuestion == 9 {
-                previousQuestionButton.setImage(UIImage(named: "BlueButtonBackground"), for: .normal)
-            } else {
-                previousQuestionButton.setImage(UIImage(named: "PurpleButtonBackground"), for: .normal)
+        if currentQuestion <= 14 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
+                
+                if currentQuestion == 4 || currentQuestion == 9 {
+                    previousQuestionButton.setImage(UIImage(named: "BlueButtonBackground"), for: .normal)
+                } else {
+                    previousQuestionButton.setImage(UIImage(named: "PurpleButtonBackground"), for: .normal)
+                }
+                
+                let nextQuestionButton = view.viewWithTag(currentQuestion + 2) as! UIButton
+                nextQuestionButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
             }
-            previousQuestionButton.isEnabled = false
         }
     }
     
