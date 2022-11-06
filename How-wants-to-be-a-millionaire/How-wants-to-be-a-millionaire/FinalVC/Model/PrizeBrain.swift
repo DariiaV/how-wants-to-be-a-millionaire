@@ -7,9 +7,9 @@ struct PrizeBrain {
         case .lose:
             return  "Повезёт в следующий раз"
         case .win:
-            return   "Вы решили забрать деньги"
-        case .getMoney:
             return  "Поздравляем Вас с победой!"
+        case .getMoney:
+            return   "Вы решили забрать деньги"
         case .nextQuestion:
             return ""
         }

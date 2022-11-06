@@ -172,7 +172,7 @@ class QuestionsScreenViewController: UIViewController {
         let questionListVC = QuestionListVC()
         questionListVC.state = state
         questionListVC.delegate = self
-        questionListVC.cash = millionaireBrain.getCashNumber()
+        questionListVC.cash = millionaireBrain.getCashNumber(state: state)
         questionListVC.fireproofCash = millionaireBrain.getFireproofCash()
         questionListVC.currentQuestion = millionaireBrain.getCurrentNumber()
         navigationController?.pushViewController(questionListVC, animated: true)

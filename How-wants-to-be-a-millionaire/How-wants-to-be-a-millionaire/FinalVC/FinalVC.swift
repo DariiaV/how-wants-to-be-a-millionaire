@@ -20,9 +20,9 @@ class FinalVC: UIViewController {
         super.viewDidLoad()
         attemptLabel.text = prizeBrain.getFinalResultText(state: state)
         finalMoneyLabel.text = String(winnedMoney) + "p"
-        navigationController?.setNavigationBarHidden(true, animated: true)
         if state == .win {
             player.playSound(soundName: "playerWon")
+            navigationController?.setNavigationBarHidden(true, animated: true)
         }
     }
 

@@ -23,15 +23,15 @@ class QuestionListVC: UIViewController {
     
     var currentQuestion = 0
     var state = GameState.nextQuestion
-    weak var delegate: QuestionListVCDelegate?
-    var activeButton = UIButton()
     var fireproofCash = 0
     var cash = 0
+    
+    weak var delegate: QuestionListVCDelegate?
+     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupActiveButton()
         setLeftConstraintForMainStackView()
         moveScrollViewToActiveButton()
         
@@ -47,23 +47,26 @@ class QuestionListVC: UIViewController {
         moveScrollViewToActiveButton()
     }
     
-    private func setupActiveButton() {
-        print(activeButton)
-        if currentQuestion < 14 {
-            activeButton = view.viewWithTag(currentQuestion + 2) as! UIButton
-        }
-    }
     
     private func setupView() {
         navigationController?.setNavigationBarHidden(true, animated: true)
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTapped(_:)))
         
-        activeButton.addGestureRecognizer(tap)
+        view.addGestureRecognizer(tap)
     }
     
     @objc private func viewDidTapped(_ sender: UITapGestureRecognizer) {
-        navigationController?.popViewController(animated: true)
-        delegate?.viewClosed()
+        switch state {
+        case .nextQuestion:
+            navigationController?.popViewController(animated: true)
+            delegate?.viewClosed()
+        default:
+            let finalVC = FinalVC()
+            finalVC.state = state
+            finalVC.winnedMoney = state == .getMoney ? fireproofCash : cash
+            navigationController?.pushViewController(finalVC, animated: true)
+        }
+      
     }
     
     private func makeButtonsOff() {
@@ -73,20 +76,11 @@ class QuestionListVC: UIViewController {
     }
     
     private func checkIsLastQuestion(){
-        if state == .lose {
+        if state == .nextQuestion {
             let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
             previousQuestionButton.setImage(UIImage(named: "RedButtonBackground"), for: .normal)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {  [self] in
                 let finalVC = FinalVC()
-                finalVC.state = state
-                finalVC.winnedMoney = fireproofCash
-                navigationController?.pushViewController(finalVC, animated: true)
-            }
-        } else if state == .getMoney {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {  [self] in
-                let finalVC = FinalVC()
-                finalVC.state = state
-                finalVC.winnedMoney = cash
                 navigationController?.pushViewController(finalVC, animated: true)
             }
         } else {
@@ -100,28 +94,17 @@ class QuestionListVC: UIViewController {
         let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
         previousQuestionButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
-            activeButton.isEnabled = true
-            currentQuestion < 13
-            ? activeButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
-            : activeButton.setImage(UIImage(named: "GoldButtonBackground"), for: .normal)
+           
             if currentQuestion == 4 || currentQuestion == 9 {
                 previousQuestionButton.setImage(UIImage(named: "BlueButtonBackground"), for: .normal)
             } else {
                 previousQuestionButton.setImage(UIImage(named: "PurpleButtonBackground"), for: .normal)
             }
             previousQuestionButton.isEnabled = false
-            self.userWin()
         }
     }
     
-    private func userWin() {
-        if state == .win {
-            let finalVC = FinalVC()
-            finalVC.state = state
-            finalVC.winnedMoney = cash
-            navigationController?.pushViewController(finalVC, animated: true)
-        }
-    }
+    
     //    меняю левый констрейнт у стеквью при повороте экрана
     func setLeftConstraintForMainStackView() {
         if UIDevice.current.orientation.isLandscape {
