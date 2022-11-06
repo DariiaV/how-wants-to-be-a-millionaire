@@ -89,7 +89,7 @@ class QuestionListVC: UIViewController {
     private func makeButtonTransition() {
         let previousQuestionButton = view.viewWithTag(currentQuestion + 1) as! UIButton
         previousQuestionButton.setImage(UIImage(named: "GreenButtonBackground"), for: .normal)
-        if currentQuestion <= 14 {
+        if currentQuestion < 14 {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) { [self] in
                 
                 if currentQuestion == 4 || currentQuestion == 9 {
