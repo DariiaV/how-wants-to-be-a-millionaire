@@ -19,4 +19,4 @@ ___
 
 Contributors: [DariiaV](https://github.com/DariiaV), [veronicarudiuk](https://github.com/veronicarudiuk), [Dmitry](https://github.com/xSP1TFIREx), [zcredi](https://github.com/zcredi).
 
-![Screen Recording 2022-11-08 at 15 24 02](https://user-images.githubusercontent.com/105722412/200554423-81a06295-05e0-4509-b3d1-c9244f5334af.gif)
+![Screen Recording 2022-11-08 at 15 24 02-2](https://user-images.githubusercontent.com/105722412/200557500-39f71701-46a9-4cae-b90c-ccabf67aeced.gif)
